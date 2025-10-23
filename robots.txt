@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://repara.eng.br/sitemap_index.xml

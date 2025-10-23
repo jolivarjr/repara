@@ -1,0 +1,367 @@
+@import "style.css";
+
+
+/* MOBILE HEADER */
+@media screen and (max-width: 1080px) {
+    .content-fixed,
+    main .content-fixed {
+        width: 100%;
+    }
+
+    #header-top-site {
+        padding: 10px 30px 6px;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: auto;
+    }
+
+    #header-top-site .custom-logo-link img {
+        width: 140px;
+    }
+
+    #header-top-site .navbar-brand {
+        display: none;
+    }
+
+    #header-top-site .navbar {
+        position: relative;
+        padding: 0;
+    }
+
+    #header-top-site .navbar .navbar-collapse {
+        position: absolute;
+        top: 75px;
+        z-index: 100;
+        background: #282828;
+        right: -30px;
+        width: 100vw;
+    }
+
+    #header-top-site .navbar .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #header-top-site .navbar .navbar-toggler {
+        background: transparent;
+        border-color: transparent;
+        padding: 0;
+        outline: none;
+        margin-left: auto;
+    }
+
+    #header-top-site .navbar .navbar-toggler-icon {
+        background-image: url('../imgs/menu-mobile.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 54px; /* ajuste o tamanho */
+        height: 54px; /* ajuste o tamanho */
+        margin-top: 6px;
+    }
+
+    #header-top-site #menu-menu-principal {
+        gap: 0;
+    }
+
+    #header-top-site #menu-menu-principal li a {
+        text-align: left;
+        padding: 16px 30px;
+    }
+
+
+    /* MOBILE SLIDER */
+    .slider-content-home .slider-container {
+        height: 350px;
+        margin-top: -1px;
+    }
+
+    .slider-content-home .slider-title {
+        text-align: center;
+        font-size: 1rem;
+        z-index: 1;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .slider-content-home .owl-carousel .owl-item img {
+        filter: brightness(0.6); /* 1 = normal, < 1 = mais escuro */
+        transition: filter 0.3s ease; /* transição suave */
+    }
+
+    .slider-content-home .owl-nav .owl-prev,
+    .slider-content-home .owl-nav .owl-next {
+        top: calc(50% - 15px);
+        font-size: 30px !important;
+    }
+
+    .slider-content-home .owl-nav .owl-prev {
+        left: 20px;
+    }
+
+    .slider-content-home .owl-nav .owl-next {
+        right: 20px;
+    }
+
+    /*** APRESENTAÇÃO 1 ***/
+    main #apresentacao .menu {
+        padding: 22px 0;
+        height: auto;
+        gap: 12px;
+    }
+
+    main #apresentacao .menu div {
+
+    }
+
+    main #apresentacao .menu .servicos,
+    main #apresentacao .menu .diferenciais,
+    main #apresentacao .menu .contato {
+        padding: 0;
+        font-size: 0.9rem;
+    }
+
+    main #apresentacao .menu .separator {
+        height: 25px;
+        margin: 5px 0;
+    }
+
+    /*** INFOS ***/
+    main #apresentacao .infos {
+        padding: 40px 30px;
+        gap: 30px;
+    }
+
+    main #apresentacao .infos h1 {
+        font-size: 1.3rem;
+        padding: 0;
+        width: 100%;
+    }
+
+    main #apresentacao .infos p {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+
+    /*** SOBRE ***/
+    main #sobre {
+        height: auto;
+        padding: 40px 30px;
+        gap: 30px;
+    }
+
+    main #sobre h2 {
+        font-size: 1.3rem;
+        width: 100%;
+    }
+
+    main #sobre p {
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    /*** SERVIÇOS ***/
+    main #servicos {
+        height: auto;
+        padding: 104px 30px;
+    }
+
+    main #servicos .fundo {
+        display: none;
+    }
+
+    main #servicos .fundo-mobile {
+        display: block;
+        position: absolute;
+        width: 90%;
+        top: 30px;
+        left: 5%;
+        object-fit: contain;
+    }
+
+    /*** Serviços com Swiper ***/
+    .swiper-slide {
+        padding: 0 15px;
+    }
+
+    main #servicos .lista_servicos .servico .capa span {
+        font-size: 0.9rem;
+    }
+
+    main #servicos .lista_servicos .servico p {
+        margin-top: 15px;
+        font-size: 0.8rem;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        top: 60%;
+    }
+
+
+    /*** Fim Serviços comSwiper ***/
+    main #servicos .cta {
+        margin: 50px auto 0 auto;
+        width: 100%;
+        height: 60px;
+        border-radius: 12px;
+        gap: 10px;
+    }
+
+    main #servicos .cta .icone {
+        width: 26px;
+    }
+
+    main #servicos .cta span {
+        font-size: 1rem;
+    }
+
+    /*** DIFERENCIAIS ***/
+    main #diferenciais {
+
+    }
+
+    main .diferenciais-header {
+        height: 80px;
+        padding: 0 30px;
+    }
+
+    main .diferenciais-header h2 {
+        font-size: 1.1rem;
+        margin-bottom: 0;
+    }
+
+    main #diferenciais .content-fixed {
+        padding: 40px 30px;
+        gap: 40px;
+    }
+
+    main .diferencial-item {
+        padding: 0;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+    }
+
+    main .diferencial-item .icon-container {
+        width: 80px;
+        height: 80px;
+        flex: 0 0 80px;
+    }
+
+    main .diferencial-item .icon-container img {
+        width: 50px;
+        height: 50px;
+    }
+
+    main .diferencial-item .diferencial-text {
+        gap: 10px;
+    }
+
+    main .diferencial-item .diferencial-text h3 {
+        text-align: left;
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+
+    main .diferencial-item .diferencial-text p {
+        font-size: 0.95rem;
+        margin-bottom: 0;
+    }
+
+    /*** FOOTER ***/
+    #footer-site {
+        padding: 60px 30px 15px;
+    }
+
+    #footer-site .ft-contato {
+        width: 100%;
+        padding: 0;
+    }
+
+    #footer-site .ft-contato .titulo {
+        width: 100%;
+        font-size: 1.5rem;
+        margin-bottom: 70px;
+    }
+
+    #footer-site .ft-contato .botao {
+        margin: 0;
+        width: 100%;
+        height: 60px;
+        border-radius: 12px;
+        gap: 10px;
+    }
+
+    #footer-site .ft-contato .botao img {
+        width: 26px;
+    }
+
+    #footer-site .ft-contato .botao span {
+        font-size: 1rem;
+    }
+
+    #footer-site .ft-redes {
+        margin-top: 100px;
+        padding: 0;
+        gap: 20px;
+    }
+
+    #footer-site .ft-redes .icone {
+        width: 26px;
+    }
+
+    #footer-site .ft-redes .ft-separator {
+        width: 120px;
+        height: 2px;
+    }
+
+    #footer-site .ft-redes .whatsapp .icone {
+        width: 30px;
+    }
+
+    #footer-site .ft-redes .localizacao .icone {
+        width: 24px;
+    }
+
+    #footer-site .ft-redes .whatsapp .numero {
+        font-size: 22px;
+    }
+
+    #footer-site .ft-redes .instagram .infos i {
+        font-size: 0.9rem;
+    }
+
+    #footer-site .ft-redes .instagram .infos span {
+        font-size: 1.17rem;
+    }
+
+    #footer-site .ft-redes .email span {
+        font-size: 0.81rem;
+    }
+
+    #footer-site .ft-redes .localizacao span {
+        font-size: 0.8rem;
+    }
+
+    #footer-site .maps {
+        margin: 40px 0;
+        width: 100%;
+        border-radius: 24px;
+        height: 260px;
+    }
+
+    #footer-site .ft-logo {
+        margin: 120px 0 0;
+    }
+
+    #footer-site .ft-logo img {
+        width: 80%;
+    }
+
+    #footer-site .copyright {
+        margin-top: 120px;
+        font-size: 0.8rem;
+    }
+}
