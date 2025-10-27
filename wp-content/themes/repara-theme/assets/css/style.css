@@ -2,18 +2,21 @@
 
 :root {
     --color-primary: #131f38;
-    --color-seconday: #e84918;
+    --color-secondary: #e84918;
 }
 
 #back-top {
-    background: var(--color-seconday);
-    color: #fff;
+    background: var(--color-secondary);
     position: fixed;
     right: 20px;
     bottom: 20px;
     padding: 10px 14px 10px 14px;
     border-radius: 5px;
     z-index: 100;
+}
+
+#back-top i {
+    color: #fff;
 }
 
 html, body {
@@ -30,6 +33,11 @@ html, body {
     margin: 0;
     box-sizing: border-box;
     color: var(--color-primary);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 p {
@@ -53,7 +61,7 @@ p {
 .spinner {
     width: 60px;
     height: 60px;
-    border: 7px solid var(--color-seconday);
+    border: 7px solid var(--color-primary);
     border-top-color: transparent;
     border-radius: 50%;
     animation: spin 1s linear infinite;
@@ -66,17 +74,32 @@ p {
 }
 
 .content-fixed {
-    width: 1080px;
+    width: 1200px;
     margin: 0 auto;
 }
 
 /* ===========HEADER========== */
 #header-top-site {
+    background: linear-gradient(270deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.6) 30%,
+    rgba(255, 255, 255, 0.85) 60%,
+    rgba(255, 255, 255, 1) 100%
+    );
+    margin-top: 46px;
+    height: 112px;
+    z-index: 999;
+}
+
+#header-top-site .header-content {
+    width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #FFF;
     min-height: 54px;
+    padding: 24px 0;
+
 }
 
 #header-top-site .custom-logo-link a {
@@ -87,33 +110,41 @@ p {
 
 #header-top-site .custom-logo-link img {
     width: auto;
+    height: 54px;
     object-fit: contain;
 }
 
 #menu-principal {
     display: flex;
-    gap: 50px;
+    gap: 2px;
 }
 
-#menu-principal li a {
-    color: #fff;
-    font-size: 1.15rem;
+#menu-principal li a,
+#menu-principal li a b {
+    color: var(--color-primary);
+    font-size: 1.3rem;
     transition: 0.2s all;
 }
 
-#menu-principal li:hover > a {
-    color: var(--color-seconday);
-    margin-top: -2px;
+#menu-principal li:hover > a,
+#menu-principal li:hover > a > b {
+    color: var(--color-secondary);
+}
+
+#menu-principal li a .menu_barra {
+    display: inline-block;
+    margin-left: 18px;
 }
 
 /* ==============SLIDER============== */
 
 .slider-content-home {
     position: relative;
+    margin-top: -158px;
 }
 
 .slider-content-home .slider-container {
-    height: 355px;
+    height: 1200px;
 }
 
 .slider-content-home .slider-title {
@@ -157,7 +188,7 @@ p {
 
 .slider-content-home .owl-nav .owl-prev span,
 .slider-content-home .owl-nav .owl-next span {
-    color: var(--color-yellow);
+    color: var(--color-secondary);
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -171,7 +202,7 @@ main #apresentacao {
 main #apresentacao .menu {
     width: 100%;
     height: 100px;
-    background: var(--color-yellow);
+    background: var(--color-secondary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,7 +262,7 @@ main #apresentacao .infos p {
 
 /*** APRESENTAÃ‡ÃƒO 2 ***/
 main #sobre {
-    background-image: url('../imgs/truck.jpg');
+    /*background-image: url('../imgs/truck.jpg');*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -245,7 +276,7 @@ main #sobre {
 }
 
 main #sobre h2 {
-    color: var(--color-yellow);
+    color: var(--color-secondary);
     font-weight: 900;
     font-size: 2.4em;
     text-align: center;
@@ -384,7 +415,7 @@ main #servicos .cta {
     align-items: center;
     justify-content: center;
     gap: 24px;
-    background: var(--color-yellow);
+    background: var(--color-secondary);
     cursor: pointer;
     position: relative;
 }
@@ -435,7 +466,7 @@ main #servicos .cta span {
 main #diferenciais {
     width: 100%;
     position: relative;
-    background-image: url('../imgs/diferencias-back-full.jpg');
+    /*background-image: url('../imgs/diferencias-back-full.jpg');*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -446,7 +477,7 @@ main .diferenciais-header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-yellow);
+    background-color: var(--color-secondary);
     padding: 25px 0;
 }
 
@@ -480,7 +511,7 @@ main .diferencial-item .icon-container {
     flex: 0 0 140px;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-yellow);
+    background-color: var(--color-secondary);
 }
 
 main .diferencial-item .icon-container img {
@@ -559,7 +590,7 @@ main .diferencial-item .diferencial-text p {
     align-items: center;
     justify-content: center;
     gap: 24px;
-    background: var(--color-yellow);
+    background: var(--color-secondary);
     cursor: pointer;
     position: relative;
 }

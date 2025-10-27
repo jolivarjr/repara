@@ -27,8 +27,10 @@ $logo = (!empty($logo_url)) ? "<img src='" . $logo_url . "' width='120' />" : ""
 </div>
 
 <header id="header-top-site">
-    <?php
-    the_custom_logo();
-    ?>
-    <?= mj_get_bootstrap_menu(null, [], $logo) ?>
+    <div class="header-content">
+        <?php
+        the_custom_logo();
+        ?>
+        <?= mj_get_bootstrap_menu(null, [], $logo) ?>
+    </div>
 </header>

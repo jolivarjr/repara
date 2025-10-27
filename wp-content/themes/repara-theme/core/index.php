@@ -24,7 +24,7 @@ require 'functions-actions.php';
 //filters
 require 'functions-filters.php';
 
-//renderizador de formulários 
+//renderizador de formulários
 require 'form-render.php';
 
 //register custom post type
@@ -40,7 +40,7 @@ require 'register-custom-metabox.php';
 require 'theme-options.php';
 
 // Função para testes
-function pre($arg, $exit = true)
+function _log($arg, $exit = true): void
 {
     echo "<pre>";
     print_r($arg);
