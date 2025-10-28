@@ -28,15 +28,6 @@ $slider_metaboxs->add_field_form('text', [
     ]
 ]);
 
-$slider_metaboxs->add_field_form('text', [
-    'label' => 'Texto do Botão',
-    'atributos' => [
-        'id' => 'banner_botao',
-        'placeholder' => 'Digite um texto, ou deixe em branco se não quiser exibir o botão',
-        'name' => 'banner_botao'
-    ]
-]);
-
 $slider_metaboxs->add_field_form('checkbox', [
     'label' => 'Abrir em outra aba',
     'atributos' => [

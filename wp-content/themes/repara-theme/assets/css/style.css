@@ -147,17 +147,28 @@ p {
     height: 1200px;
 }
 
+@media screen and (max-width: 1366px) {
+    .slider-content-home .slider-container {
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
 .slider-content-home .slider-title {
     position: absolute;
     width: 80%;
-    height: 36px;
+    padding: 0 20%;
     top: calc(50% - 18px);
     left: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 2.5rem;
+    font-weight: 500;
     text-transform: uppercase;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     letter-spacing: 1px;
