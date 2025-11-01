@@ -34,23 +34,12 @@ jQuery(document).ready(function () {
     // Mostra o botão quando desce um pouco a página
     jQuery(window).scroll(function () {
         const scrollTop = jQuery(this).scrollTop();
-        const windowHeight = jQuery(this).height();
-        const documentHeight = jQuery(document).height();
 
-        // Está no fim da página? (com margem de 50px pra evitar bug)
-        const atBottom = (scrollTop + windowHeight >= documentHeight - 50);
-
-        if (scrollTop > 100 && !atBottom) {
+        if (scrollTop > 100) {
             jQuery('#back-top').fadeIn();
         } else {
             jQuery('#back-top').fadeOut();
         }
-    });
-
-    // Animação suave ao clicar no botão
-    jQuery('#back-top').click(function (e) {
-        e.preventDefault();
-        jQuery('html, body').animate({scrollTop: 0}, 400); // 600ms de animação
     });
 
     // menus
@@ -84,6 +73,19 @@ jQuery(document).ready(function () {
         jQuery('html, body').animate({
             scrollTop: jQuery('#footer-site').offset().top
         }, 500);
+    });
+
+    // Animação suave ao clicar no botão
+    jQuery('#back-top').click(function (e) {
+        e.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, 400); // 600ms de animação
+    });
+
+    // Animação accordeon
+    jQuery('.accordeon .titulo').click(function (e) {
+        e.preventDefault();
+        jQuery(this).find('img').toggleClass('rotate');
+        jQuery(this).siblings('.content').toggleClass('hide');
     });
 });
 
@@ -119,42 +121,6 @@ jQuery(document).ready(function () {
             }
         }
     });
-});
-
-// Serviços: Inicialização do Swiper
-new Swiper('.lista_servicos', {
-    loop: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
-
-    slidesPerView: 1,
-    spaceBetween: 0,
-
-    breakpoints: {
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 0,
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 0,
-        }
-    },
-
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-
-    effect: 'slide',
-    speed: 700,
 });
 
 // Envia e-mail do formulário de contato
