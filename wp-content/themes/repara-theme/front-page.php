@@ -9,7 +9,6 @@
         <h4>Mais de 8 anos de experiência em engenharia e manutenção industrial.</h4>
     </section>
 
-
     <section id="sobre">
         <div class="sobre-info content-fixed">
             <h3>Sobre Nós</h3>
@@ -216,18 +215,93 @@
                 de atendimento em todo o Brasil
             </h2>
 
-            <a target="_blank" href="<?= SITE_OPTIONS['link_contato'] ?? "#" ?>"  class="saiba_mais">
+            <a target="_blank" href="<?= SITE_OPTIONS['link_contato'] ?? "#" ?>" class="saiba_mais">
                 <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/wpp-white.png' ?>" alt="">
                 SAIBA MAIS
             </a>
     </section>
 
     <section id="diferenciais">
+        <div class="bloco_1">
 
+            <div class="item">
+                <div class="icone">
+                    <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/24horas.png' ?>" alt="">
+                </div>
+
+                <div class="textos">
+                    <h4>ATENDIMENTO</h4>
+                    <div class="horas">
+                        <p>24<span>H</span></p>
+                    </div>
+                    <h5>
+                        Single Site <br>e Multi Site
+                    </h5>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="icone">
+                    <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/equipe.png' ?>" alt="">
+                </div>
+
+                <div class="textos">
+                    <h4>EQUIPE</h4>
+                    <div class="detalhe"></div>
+                    <div class="paragrafos">
+                        <p>Supervisão dedicada</p>
+
+                        <p>Profissionais qualificados tecnicamente</p>
+
+                        <p>Atuamos com base em normas técnicas rigorosas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="icone">
+                    <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/gear.png' ?>" alt="">
+                </div>
+
+                <div class="textos">
+                    <h4>GESTÃO</h4>
+                    <div class="detalhe"></div>
+                    <div class="paragrafos">
+                        <p>Controles Mobile</p>
+
+                        <p>Entrega de KPIs e indicadores de desempenho</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bloco_2">
+           <div class="content-fixed">
+               <div class="texto_1">
+                   Processos ágeis e eficientes,
+                   garantindo resposta imediata às necessidades do cliente:
+               </div>
+
+               <div class="texto_2">
+                   • Agilidade na contratação e alocação de pessoas <br>
+                   • Rapidez na disponibilização de materiais e equipamentos
+               </div>
+           </div>
+        </div>
     </section>
 
     <section id="portfolio">
-
+        <div class="galeria">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/1.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/2.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/3.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/4.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/5.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/6.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/7.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/8.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/9.jpg' ?>" alt="" class="port_foto">
+        </div>
     </section>
 
     <section id="clientes">
