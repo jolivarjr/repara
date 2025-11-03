@@ -67,11 +67,19 @@ jQuery(document).ready(function () {
         }, 500);
     });
 
-    jQuery('a[href="#contato"],.contato').on('click', function (e) {
+    jQuery('a[href="#portfolio"],.portfolio').on('click', function (e) {
         e.preventDefault();
 
         jQuery('html, body').animate({
-            scrollTop: jQuery('#footer-site').offset().top
+            scrollTop: jQuery('#portfolio').offset().top
+        }, 500);
+    });
+
+    jQuery('a[href="#clientes"],.clientes').on('click', function (e) {
+        e.preventDefault();
+
+        jQuery('html, body').animate({
+            scrollTop: jQuery('#clientes').offset().top
         }, 500);
     });
 
@@ -129,18 +137,17 @@ jQuery(document).ready(function () {
     jQuery("#enviar_form_contato").on('click', function (event) {
         event.preventDefault()
 
-        let nome = jQuery("#nome_contato").val().trim()
-        let email = jQuery("#email_contato").val().trim()
-        let telefone = jQuery("#telefone_contato").val().trim()
-        let assunto = jQuery("#assunto_contato").val().trim()
-        let mensagem = jQuery("#mensagem_contato").val().trim()
+        let nome = jQuery("#nome").val().trim()
+        let telefone = jQuery("#telefone").val().trim()
+        let email = jQuery("#email").val().trim()
+        let mensagem = jQuery("#mensagem").val().trim()
 
         jQuery.ajax({
             url: window.MJ_AJAX_URL,
             type: 'POST',
             data: {
                 action: 'enviar_formulario_contato',
-                nome, email, telefone, assunto, mensagem
+                nome, telefone, email, mensagem
             },
             success: function (resultado) {
                 jQuery("#result_form_contato").html(resultado)

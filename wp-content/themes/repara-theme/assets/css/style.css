@@ -710,10 +710,169 @@ main #portfolio .galeria img {
     height: 425px;
     object-fit: cover;
     display: block;
-    border-radius: 6px;
 }
 
 /*** CLIENTES ***/
+main #clientes {
+    padding: 95px 0 350px;
+    background: linear-gradient(270deg,
+    rgb(19, 31, 56, 0.3) 0%,
+    rgb(19, 31, 56, 0.2) 30%,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(255, 255, 255, 1) 100%
+    );
+}
+
+main #clientes .infos {
+    display: flex;
+    gap: 32px;
+}
+
+main #clientes .infos .icon {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    background: var(--color-secondary);
+}
+
+main #clientes .infos .textos .p1,
+main #clientes .infos .textos .p2 {
+    font-size: 60px;
+}
+
+main #clientes .infos .textos .p1 {
+    line-height: 45px;
+}
+
+main #clientes .infos .textos .p2 {
+    font-weight: 900;
+    line-height: 66px;
+}
+
+main #clientes .infos .textos .p3 {
+    margin-top: 32px;
+    font-size: 30px;
+}
+
+/*** Marcas ***/
+main #clientes .marcas {
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+main #clientes .marcas .linha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+main #clientes .marcas .linha.linha-1 {
+    justify-content: space-between;
+}
+
+main #clientes .marcas .linha.linha-2 {
+    gap: 90px;
+}
+
+main #clientes .marcas .linha.linha-3 {
+    gap: 170px;
+}
+
+main #clientes .marcas .item {
+    object-fit: contain;
+    height: auto;
+}
+
+/*** CONTATO ***/
+main #contato {
+    background: var(--color-primary);
+    padding-bottom: 165px;
+    display: flex;
+}
+
+main #contato .content-fixed {
+    margin-top: -70px;
+    overflow: hidden;
+    border-radius: 32px;
+}
+
+main #contato .titulo {
+    width: 100%;
+    background: #d84f27;
+    text-align: center;
+    padding-top: 24px;
+}
+
+main #contato .titulo span {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
+    display: block;
+    margin-bottom: -14px;
+}
+
+main #contato form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 45px 60px;
+    background: #d6461b;
+}
+
+
+main #contato form input,
+main #contato form textarea {
+    width: 100%;
+    background: #fff;
+    border: none;
+    padding: 18px 14px;
+    font-size: 25px;
+    color: #9096a1;
+    border-radius: 9px;
+}
+
+main #contato form #enviar_form_contato {
+    margin-top: 30px;
+}
+
+main #contato form #enviar_form_contato {
+    width: 580px;
+    height: 88px;
+    border: none;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 9px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 33px;
+    outline: none;
+}
+
+
+main #contato form #enviar_form_contato:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(19, 31, 56, 0.4);
+    filter: brightness(1.1);
+}
+
+
+/*main #contato form #result_form_contato {*/
+/*    width: 100%;*/
+/*    background: #0ea460;*/
+/*    color: #fff;*/
+/*    border-radius: 9px;*/
+/*    text-align: center;*/
+/*    padding: 12px;*/
+/*    font-size: 33px;*/
+/*}*/
 
 /* ==============PRE-FOOTER============== */
 .pre-footer-container {

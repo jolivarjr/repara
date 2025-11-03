@@ -276,36 +276,88 @@
         </div>
 
         <div class="bloco_2">
-           <div class="content-fixed">
-               <div class="texto_1">
-                   Processos ágeis e eficientes,
-                   garantindo resposta imediata às necessidades do cliente:
-               </div>
+            <div class="content-fixed">
+                <div class="texto_1">
+                    Processos ágeis e eficientes,
+                    garantindo resposta imediata às necessidades do cliente:
+                </div>
 
-               <div class="texto_2">
-                   • Agilidade na contratação e alocação de pessoas <br>
-                   • Rapidez na disponibilização de materiais e equipamentos
-               </div>
-           </div>
+                <div class="texto_2">
+                    • Agilidade na contratação e alocação de pessoas <br>
+                    • Rapidez na disponibilização de materiais e equipamentos
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="portfolio">
         <div class="galeria">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/1.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/2.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/3.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/4.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/5.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/6.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/7.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/8.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/jpeg/9.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/1.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/2.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/3.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/4.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/5.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/6.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/7.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/8.jpg' ?>" alt="" class="port_foto">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/9.jpg' ?>" alt="" class="port_foto">
         </div>
     </section>
 
     <section id="clientes">
+        <div class="content-fixed">
 
+            <div class="infos">
+                <div class="icon"></div>
+
+                <div class="textos">
+                    <p class="p1">NOSSOS</p>
+                    <p class="p2">CLIENTES</p>
+                    <p class="p3">
+                        Ao longo da nossa trajetória, conquistamos a confiança de empresas
+                        de diversos setores. Cada cliente é um parceiro estratégico, e juntos construímos histórias de
+                        sucesso pautadas em qualidade e inovação.
+                    </p>
+                </div>
+            </div>
+
+            <div class="marcas">
+                <div class="linha linha-4">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/ml.png' ?>" alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/dhl.png' ?>" alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/renner.png' ?>" alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/americanas.png' ?>" alt="">
+                </div>
+
+                <div class="linha linha-2">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/pitagoras.png' ?>" alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sampaio.png' ?>" alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/brf.png' ?>" alt="">
+                </div>
+
+                <div class="linha linha-3">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/carrefour.png' ?>" alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sams.png' ?>" alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/salta.png' ?>" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="content-fixed">
+            <div class="titulo"><span>Contato/Orçamento</span></div>
+            <form>
+                <input type="text" id="nome" placeholder="Nome:">
+                <input type="text" id="telefone" placeholder="Telefone:">
+                <input type="text" id="email" placeholder="E-mail:">
+                <textarea id="mensagem" cols="30" rows="5" placeholder="Mensagem:"></textarea>
+
+                <button id="enviar_form_contato">Enviar</button>
+                <div id="result_form_contato"></div>
+            </form>
+        </div>
     </section>
 </main>
 
