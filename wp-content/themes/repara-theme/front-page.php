@@ -359,6 +359,73 @@
             </form>
         </div>
     </section>
+
+    <section id="onde_estamos">
+        <div class="content">
+
+            <div class="titulo">
+                <span>onde estamos</span>
+                <div class="detalhe"></div>
+            </div>
+
+            <div class="infos">
+                <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/o_location.png' ?>" alt="">
+                <div class="textos">
+                    <p class="bold">
+                        Estamos presentes em 23 estados do Brasil
+                        e no Distrito Federal:
+                    </p>
+                    <span>
+                        • Acre (AC)<br>
+                        • Alagoas (AL)<br>
+                        • Amapá (AP)<br>
+                        • Amazonas (AM)<br>
+                        • Bahia (BA)<br>
+                        • Ceará (CE)<br>
+                        • Espírito Santo (ES)<br>
+                        • Goiás (GO)<br>
+                        • Distrito Federal (DF)<br>
+                        • Maranhão (MA)<br>
+                        • Mato Grosso (MT)<br>
+                        • Mato Grosso do Sul (MS)<br>
+                        • Minas Gerais (MG)<br>
+                        • Pará (PA)<br>
+                        • Paraíba (PB)<br>
+                        • Pernambuco (PE)<br>
+                        • Piauí (PI)<br>
+                        • Rio de Janeiro (RJ)<br>
+                        • Rio Grande do Norte (RN)<br>
+                        • Rio Grande do Sul (RS)<br>
+                        • Rondônia (RO)<br>
+                        • São Paulo (SP)<br>
+                        • Sergipe (SE)<br>
+                        • Tocantins (TO)
+                    </span>
+                </div>
+            </div>
+
+            <div class="infos">
+                <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/o_handshake.png' ?>" alt="">
+                <div class="textos">
+                    <p class="bold">
+                        Contamos com clientes ativos
+                        em diversas regiões do país
+                    </p>
+                </div>
+            </div>
+            <div class="infos">
+                <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/o_building.png' ?>" alt="">
+                <div class="textos">
+                    <p class="bold">
+                        Unidades: <br>
+                        Matriz: Belém/PA <br>
+                        Bases Operacionais: Fortaleza/CE, São Paulo/SP e São Luiz/MA
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
 </main>
 
 <?php get_template_part('includes/footer-page'); ?>

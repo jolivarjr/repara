@@ -9,10 +9,25 @@
     }
 
     #header-top-site {
-        padding: 10px 30px 6px;
+        width: 100%;
+        padding: 15px 30px 12px;
+        display: flex;
+        margin: 0;
         justify-content: space-between;
         align-items: flex-start;
         min-height: auto;
+
+        background: linear-gradient(270deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.95) 30%,
+        rgba(255, 255, 255, 1) 100%
+        );
+    }
+
+    #header-top-site .header-content {
+        padding: 0;
+        width: 100%;
+        height: auto;
     }
 
     #header-top-site .custom-logo-link img {
@@ -30,11 +45,15 @@
 
     #header-top-site .navbar .navbar-collapse {
         position: absolute;
-        top: 75px;
+        top: 64px;
         z-index: 100;
-        background: #282828;
         right: -30px;
         width: 100vw;
+        background: linear-gradient(270deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.95) 30%,
+        rgba(255, 255, 255, 1) 100%
+        );
     }
 
     #header-top-site .navbar .container {
@@ -51,28 +70,49 @@
     }
 
     #header-top-site .navbar .navbar-toggler-icon {
-        background-image: url('../imgs/menu-mobile.png');
+        background-image: url('../imgs/menu-mobile.svg');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        width: 54px; /* ajuste o tamanho */
-        height: 54px; /* ajuste o tamanho */
-        margin-top: 6px;
+        width: 48px; /* ajuste o tamanho */
+        height: 48px; /* ajuste o tamanho */
     }
 
-    #header-top-site #menu-menu-principal {
+    #header-top-site #menu-principal {
         gap: 0;
     }
 
-    #header-top-site #menu-menu-principal li a {
+    #header-top-site #menu-principal li a {
         text-align: left;
-        padding: 16px 30px;
+        padding: 15px 30px;
+        font-size: 1.3rem;
     }
 
+    #header-top-site #menu-principal li:first-child a {
+        padding-top: 30px;
+    }
+
+    #header-top-site #menu-principal li:last-child a {
+        padding-bottom: 30px;
+    }
+
+    #header-top-site #menu-principal li b {
+        margin: 0;
+        padding: 0;
+        font-size: 1.3rem;
+    }
+
+    #header-top-site #menu-principal li a .menu_barra {
+        display: none;
+    }
 
     /* MOBILE SLIDER */
+    .slider-content-home {
+        margin: 0;
+    }
+
     .slider-content-home .slider-container {
-        height: 350px;
+        height: 425px;
         margin-top: -1px;
     }
 
@@ -84,7 +124,7 @@
     }
 
     .slider-content-home .owl-carousel .owl-item img {
-        filter: brightness(0.6); /* 1 = normal, < 1 = mais escuro */
+        filter: brightness(1); /* 1 = normal, < 1 = mais escuro */
         transition: filter 0.3s ease; /* transição suave */
     }
 

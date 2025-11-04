@@ -13,6 +13,7 @@
     padding: 10px 14px 10px 14px;
     border-radius: 5px;
     z-index: 100;
+    box-shadow: 0 10px 40px rgba(19, 31, 56, 0.4);
 }
 
 #back-top i {
@@ -255,6 +256,12 @@ main .introducao h4 {
 main #sobre {
     width: 100%;
     padding: 100px 25px;
+    background: linear-gradient(270deg,
+    rgb(19, 31, 56, 0.3) 0%,
+    rgb(19, 31, 56, 0.2) 30%,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(255, 255, 255, 1) 100%
+    );
 }
 
 main #sobre .sobre-info {
@@ -863,16 +870,78 @@ main #contato form #enviar_form_contato:hover {
     filter: brightness(1.1);
 }
 
+/*** ONDE ESTAMOS ***/
+main #onde_estamos {
+    background-image: url(../imgs/mapa_section.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 1290px;
+    padding: 220px 25px 130px;
+}
 
-/*main #contato form #result_form_contato {*/
-/*    width: 100%;*/
-/*    background: #0ea460;*/
-/*    color: #fff;*/
-/*    border-radius: 9px;*/
-/*    text-align: center;*/
-/*    padding: 12px;*/
-/*    font-size: 33px;*/
-/*}*/
+main #onde_estamos .content {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+main #onde_estamos .content .titulo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+
+main #onde_estamos .content .titulo span {
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+}
+
+main #onde_estamos .content .titulo .detalhe {
+    width: 10000px;
+    height: 8px;
+    background: #fff;
+    margin-left: calc(-10000px + 304px);
+}
+
+main #onde_estamos .content .infos {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+main #onde_estamos .content .infos:nth-child(2) {
+    max-width: 430px;
+}
+
+
+main #onde_estamos .content .infos img {
+    flex-shrink: 0;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+main #onde_estamos .content .infos .bold {
+    font-weight: 400;
+    font-size: 22px;
+    color: #fff;
+    line-height: 30px;
+}
+
+main #onde_estamos .content .infos span {
+    color: #fff;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    display: block;
+}
 
 /* ==============PRE-FOOTER============== */
 .pre-footer-container {
@@ -881,7 +950,64 @@ main #contato form #enviar_form_contato:hover {
 
 /* ==============FOOTER============== */
 #footer-site {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 400px 25px 360px;
+    background: linear-gradient(270deg,
+    rgb(19, 31, 56, 0.3) 0%,
+    rgb(19, 31, 56, 0.2) 30%,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(255, 255, 255, 1) 100%
+    );
+}
 
+#footer-site .content {
+}
+
+#footer-site .content .logo {
+    margin-bottom: 220px;
+}
+
+#footer-site .content .item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#footer-site .content .item img {
+    flex-shrink: 0;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+#footer-site .content .item:nth-child(2) img,
+#footer-site .content .item:nth-child(3) img,
+#footer-site .content .item:nth-child(5) img {
+    margin-top: 2px;
+}
+
+#footer-site .content .item:nth-child(6) img {
+    margin-top: -2px;
+}
+
+#footer-site .content .item p,
+#footer-site .content .item span {
+    font-size: 35px;
+    line-height: 40px;
+}
+
+#footer-site .content .item p {
+    font-weight: 500;
+}
+
+#footer-site .content p.follow {
+    font-weight: 500;
+    margin-top: 35px;
+    font-size: 35px;
+    padding-left: 45px;
 }
 
 /*************************************************************************************************/

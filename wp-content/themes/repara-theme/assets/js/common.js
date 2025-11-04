@@ -13,13 +13,13 @@ jQuery(document).ready(function () {
     navcollapese.on('show.bs.collapse', function () {
         // Menu está a ser aberto - mostrar ícone de fechar
         const icon = jQuery('.navbar-toggler').find('.navbar-toggler-icon');
-        icon.css('background-image', 'url("' + window.MJ_TEMPLATE_URL + '/assets/imgs/close-menu.png")');
+        icon.css('background-image', 'url("' + window.MJ_TEMPLATE_URL + '/assets/imgs/menu-close.svg")');
     });
 
     navcollapese.on('hide.bs.collapse', function () {
         // Menu está a ser fechado - mostrar ícone de abrir
         const icon = jQuery('.navbar-toggler').find('.navbar-toggler-icon');
-        icon.css('background-image', 'url("' + window.MJ_TEMPLATE_URL + '/assets/imgs/menu-mobile.png")');
+        icon.css('background-image', 'url("' + window.MJ_TEMPLATE_URL + '/assets/imgs/menu-mobile.svg")');
     });
 
     // OU se você quiser fechar em QUALQUER item de menu (incluindo principais)
