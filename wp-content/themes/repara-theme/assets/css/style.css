@@ -544,7 +544,12 @@ main #servicos .modalidades .items {
     text-align: center;
 }
 
-main #servicos .modalidades .items b {
+main #servicos .modalidades .items_mobile {
+    display: none;
+}
+
+main #servicos .modalidades .items b ,
+main #servicos .modalidades .items_mobile b {
     color: var(--color-secondary);
 }
 

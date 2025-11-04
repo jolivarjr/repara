@@ -208,6 +208,12 @@
                 <div class="items">
                     Spot (pontual) <b>•</b> Recorrente com equipe volante <b>•</b> Recorrente com equipe fixa
                 </div>
+
+                <div class="items_mobile">
+                    <b>•</b> Spot (pontual)<br>
+                    <b>•</b> Recorrente com equipe volante<br>
+                    <b>•</b> Recorrente com equipe fixa
+                </div>
             </div>
 
             <h2>
@@ -283,7 +289,7 @@
                 </div>
 
                 <div class="texto_2">
-                    • Agilidade na contratação e alocação de pessoas <br>
+                    • Agilidade na contratação e alocação de pessoas <br><span></span>
                     • Rapidez na disponibilização de materiais e equipamentos
                 </div>
             </div>
