@@ -17,7 +17,7 @@
                             <span class="slider-title"><?= $slider->post_title ?></span>
                         <?php else: ?>
 
-                            <div class="slider-adicional" data-aos="<?= wp_is_mobile() ? 'fade-up-left' : '' ?>">
+                            <div class="slider-adicional" data-aos="<?= wp_is_mobile() ? 'fade-down' : '' ?>">
                                 <div class="s-texto">
                                     <div class="detalhe" data-aos="fade-right"></div>
                                     <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/text_cuidamos.png' ?>" data-aos="fade-up" alt="">
