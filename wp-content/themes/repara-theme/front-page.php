@@ -322,7 +322,7 @@
                         $mobile_images_found = true;
                         ?>
                         <div class="container_foto">
-                            <img data-aos="zoom-in" src="<?= $image_url ?>" alt="" class="port_foto">
+                            <img src="<?= $image_url ?>" alt="" class="port_foto">
                         </div>
                         <?php
                     }
@@ -410,7 +410,7 @@
     </section>
 
     <section id="contato">
-        <div class="content-fixed" data-aos="fade-up" data-aos-duration="1500">
+        <div class="content-fixed" data-aos="fade-up">
             <div class="titulo"><span>Contato/Orçamento</span></div>
             <form>
                 <input type="text" id="nome" placeholder="Nome:">
@@ -428,11 +428,11 @@
         <div class="content">
 
             <div class="titulo">
-                <span data-aos="fade-left" data-aos-duration="1500">onde estamos</span>
-                <div data-aos="fade-right" data-aos-duration="1500" class="detalhe"></div>
+                <span data-aos="fade-left">onde estamos</span>
+                <div data-aos="fade-right" class="detalhe"></div>
             </div>
 
-            <div data-aos="fade-up" data-aos-duration="1500" class="infos">
+            <div data-aos="fade-up" class="infos">
                 <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/o_location.png' ?>" alt="">
                 <div class="textos">
                     <p class="bold">

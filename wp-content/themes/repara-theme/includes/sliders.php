@@ -17,12 +17,12 @@
                             <span class="slider-title"><?= $slider->post_title ?></span>
                         <?php else: ?>
 
-                            <div class="slider-adicional" data-aos="<?= wp_is_mobile() ? 'fade-down' : '' ?>">
+                            <div class="slider-adicional">
                                 <div class="s-texto">
-                                    <div class="detalhe" data-aos="fade-right"></div>
-                                    <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/text_cuidamos.png' ?>" data-aos="fade-down" alt="">
+                                    <div class="detalhe"></div>
+                                    <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/text_cuidamos.png' ?>" alt="">
                                 </div>
-                                <img class="botao" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/botao_fale.png' ?>" data-aos="fade-up" alt="">
+                                <img class="botao" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/botao_fale.png' ?>" alt="">
                             </div>
 
                         <?php endif; ?>
