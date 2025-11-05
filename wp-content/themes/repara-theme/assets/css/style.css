@@ -164,14 +164,6 @@ p {
     height: 1080px;
 }
 
-@media screen and (max-width: 1366px) {
-    .slider-content-home .slider-container {
-        height: 700px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-}
 
 .slider-content-home .slider-title {
     position: absolute;

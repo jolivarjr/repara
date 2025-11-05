@@ -1,4 +1,5 @@
 @import "style.css";
+@import "style-1366.css";
 
 
 /* MOBILE HEADER */
@@ -142,266 +143,522 @@
         right: 20px;
     }
 
-    /*** APRESENTAÇÃO 1 ***/
-    main #apresentacao .menu {
-        padding: 22px 0;
+    /*========================= MAIN =============================*/
+    main .introducao {
         height: auto;
-        gap: 12px;
+        padding: 30px;
+        gap: 25px;
     }
 
-    main #apresentacao .menu div {
-
-    }
-
-    main #apresentacao .menu .servicos,
-    main #apresentacao .menu .diferenciais,
-    main #apresentacao .menu .contato {
-        padding: 0;
-        font-size: 0.9rem;
-    }
-
-    main #apresentacao .menu .separator {
-        height: 25px;
-        margin: 5px 0;
-    }
-
-    /*** INFOS ***/
-    main #apresentacao .infos {
-        padding: 40px 30px;
-        gap: 30px;
-    }
-
-    main #apresentacao .infos h1 {
-        font-size: 1.3rem;
-        padding: 0;
-        width: 100%;
-    }
-
-    main #apresentacao .infos p {
+    /*========================= INTRO =============================*/
+    main .introducao h3,
+    main .introducao h4 {
+        font-size: 21px;
         text-align: center;
-        font-size: 1.2rem;
-        margin-bottom: 0;
     }
 
-    /*** SOBRE ***/
+    /*========================= SOBRE =============================*/
     main #sobre {
-        height: auto;
-        padding: 40px 30px;
-        gap: 30px;
+        padding: 60px 30px;
     }
 
-    main #sobre h2 {
-        font-size: 1.3rem;
-        width: 100%;
+    main #sobre .sobre-info h3 {
+        font-size: 30px;
+        letter-spacing: 5px;
     }
 
-    main #sobre p {
-        width: 100%;
-        font-size: 1rem;
-        text-align: center;
-        line-height: 1.4;
+    main #sobre .sobre-info .detalhe {
+        margin-top: 5px;
     }
 
-    /*** SERVIÇOS ***/
-    main #servicos {
-        height: auto;
-        padding: 104px 30px;
-    }
-
-    main #servicos .fundo {
-        display: none;
-    }
-
-    main #servicos .fundo-mobile {
-        display: block;
-        position: absolute;
-        width: 90%;
-        top: 30px;
-        left: 5%;
-        object-fit: contain;
-    }
-
-    /*** Serviços com Swiper ***/
-    .swiper-slide {
-        padding: 0 15px;
-    }
-
-    main #servicos .lista_servicos .servico .capa span {
-        font-size: 0.9rem;
-    }
-
-    main #servicos .lista_servicos .servico p {
-        margin-top: 15px;
-        font-size: 0.8rem;
-    }
-
-    .swiper-button-prev, .swiper-button-next {
-        top: 60%;
-    }
-
-
-    /*** Fim Serviços comSwiper ***/
-    main #servicos .cta {
-        margin: 50px auto 0 auto;
-        width: 100%;
-        height: 60px;
-        border-radius: 12px;
-        gap: 10px;
-    }
-
-    main #servicos .cta .icone {
-        width: 26px;
-    }
-
-    main #servicos .cta span {
-        font-size: 1rem;
-    }
-
-    /*** DIFERENCIAIS ***/
-    main #diferenciais {
-
-    }
-
-    main .diferenciais-header {
-        height: 80px;
-        padding: 0 30px;
-    }
-
-    main .diferenciais-header h2 {
-        font-size: 1.1rem;
-        margin-bottom: 0;
-    }
-
-    main #diferenciais .content-fixed {
-        padding: 40px 30px;
+    main #sobre .sobre-info .texto {
+        margin-top: 50px;
         gap: 40px;
     }
 
-    main .diferencial-item {
-        padding: 0;
-        justify-content: space-between;
-        gap: 10px;
+    main #sobre .sobre-info .texto p {
+        font-size: 18px;
+        line-height: 31px;
+    }
+
+
+    /*** BASES ***/
+    main #sobre .sobre-bases {
+        margin-top: 50px;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    main #sobre .sobre-bases .fileira {
+        display: contents;
+    }
+
+    /* Posiciona cada ícone acima de sua informação */
+    main #sobre .sobre-bases .fileira:first-child .icone:nth-child(1) {
+        order: 1;
+        margin-bottom: -20px;
+    }
+
+    main #sobre .sobre-bases .fileira:last-child .informacao:nth-child(1) {
+        order: 2;
+    }
+
+    main #sobre .sobre-bases .fileira:first-child .icone:nth-child(2) {
+        order: 3;
+    }
+
+    main #sobre .sobre-bases .fileira:last-child .informacao:nth-child(2) {
+        order: 4;
+    }
+
+    main #sobre .sobre-bases .fileira:first-child .icone:nth-child(3) {
+        order: 5;
+    }
+
+    main #sobre .sobre-bases .fileira:last-child .informacao:nth-child(3) {
+        order: 6;
+    }
+
+    main #sobre .sobre-bases .fileira:first-child .icone:nth-child(4) {
+        order: 7;
+    }
+
+    main #sobre .sobre-bases .fileira:last-child .informacao:nth-child(4) {
+        order: 8;
+    }
+
+    main #sobre .sobre-bases .fileira .icone,
+    main #sobre .sobre-bases .fileira .informacao {
         width: 100%;
+        border-right: none !important;
     }
 
-    main .diferencial-item .icon-container {
-        width: 80px;
-        height: 80px;
-        flex: 0 0 80px;
+    main #sobre .sobre-bases .fileira .icone {
+        height: 100px;
+        border-bottom: none;
+        padding-top: 45px;
     }
 
-    main .diferencial-item .icon-container img {
-        width: 50px;
-        height: 50px;
+    main #sobre .sobre-bases .fileira .icone:first-child {
+        padding-top: 0;
     }
 
-    main .diferencial-item .diferencial-text {
-        gap: 10px;
+    main #sobre .sobre-bases .fileira .icone img {
+        max-width: 72px;
+        height: auto;
     }
 
-    main .diferencial-item .diferencial-text h3 {
-        text-align: left;
+    main #sobre .sobre-bases .fileira .informacao {
+        height: auto;
+        padding: 20px 20px 30px;
+        margin-top: 0;
+        border-bottom: 1px solid var(--color-secondary);
+    }
+
+    main #sobre .sobre-bases .fileira .informacao:last-child {
+        border-bottom: none;
+    }
+
+    main #sobre .sobre-bases .fileira .informacao .titulo {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    main #sobre .sobre-bases .fileira .informacao .texto {
+        font-size: 20px;
+        line-height: 5px;
+    }
+
+    main #sobre .sobre-bases .fileira .informacao:nth-child(3) .texto {
+        line-height: 30px;
+    }
+
+    /*** POLÍTICAS ***/
+    main #sobre .politicas {
+        margin-top: 70px;
+    }
+
+    main #sobre .politicas h3 {
+        font-size: 28px;
+        letter-spacing: 5px;
+    }
+
+    main #sobre .politicas i {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    /*** ACCORDEON ***/
+    main #sobre .politicas .items {
+        width: 100%;
+        gap: 35px;
+    }
+
+    main #sobre .politicas .items .accordeon .titulo {
+        padding: 12px 20px;
         font-size: 0.9rem;
-        margin-bottom: 0;
+        border-radius: 10px;
     }
 
-    main .diferencial-item .diferencial-text p {
-        font-size: 0.95rem;
-        margin-bottom: 0;
+    main #sobre .politicas .items .accordeon .titulo img {
+        width: 18px;
     }
 
-    /*** FOOTER ***/
-    #footer-site {
-        padding: 60px 30px 15px;
+    main #sobre .politicas .items .accordeon .content .conteudo, main #sobre .politicas .items .accordeon .content .link {
+        font-size: 16px;
+        line-height: 30px;
+        padding: 0 10px;
     }
 
-    #footer-site .ft-contato {
-        width: 100%;
+    main #sobre .politicas .items .accordeon .conteudo {
+        margin-top: 15px;
+    }
+
+    /*========================= SERVIÇOS =============================*/
+    main #servicos {
+        padding: 60px 30px;
+    }
+
+    main #servicos h3 {
+        font-size: 30px;
+    }
+
+    main #servicos .detalhe {
+        margin-top: 5px;
+    }
+
+    main #servicos h4 {
+        font-size: 22px;
         padding: 0;
+        font-weight: 700;
+        margin-top: 35px;
     }
 
-    #footer-site .ft-contato .titulo {
-        width: 100%;
-        font-size: 1.5rem;
-        margin-bottom: 70px;
+    /*** cards ***/
+    main #servicos .cards {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
     }
 
-    #footer-site .ft-contato .botao {
-        margin: 0;
-        width: 100%;
-        height: 60px;
-        border-radius: 12px;
-        gap: 10px;
+    main #servicos .cards .item {
+        min-height: auto;
+        gap: 30px;
+        padding-top: 25px;
+        padding-bottom: 45px;
     }
 
-    #footer-site .ft-contato .botao img {
-        width: 26px;
+    main #servicos .cards .item .titulo {
+        font-size: 21px;
     }
 
-    #footer-site .ft-contato .botao span {
-        font-size: 1rem;
+    main #servicos .cards .item .linha {
+        margin-top: 10px;
     }
 
-    #footer-site .ft-redes {
-        margin-top: 100px;
-        padding: 0;
+    main #servicos .cards .item .opcoes {
         gap: 20px;
     }
 
-    #footer-site .ft-redes .icone {
-        width: 26px;
+    main #servicos .cards .item .opcoes div img {
+        max-width: 18px;
     }
 
-    #footer-site .ft-redes .ft-separator {
-        width: 120px;
-        height: 2px;
+    main #servicos .cards .item .opcoes div {
+        align-items: flex-start;
     }
 
-    #footer-site .ft-redes .whatsapp .icone {
-        width: 30px;
+    main #servicos .cards .item .opcoes div span {
+        font-size: 17px;
+        margin-top: 0;
+        line-height: 17px;
     }
 
-    #footer-site .ft-redes .localizacao .icone {
-        width: 24px;
-    }
-
-    #footer-site .ft-redes .whatsapp .numero {
-        font-size: 22px;
-    }
-
-    #footer-site .ft-redes .instagram .infos i {
-        font-size: 0.9rem;
-    }
-
-    #footer-site .ft-redes .instagram .infos span {
-        font-size: 1.17rem;
-    }
-
-    #footer-site .ft-redes .email span {
-        font-size: 0.81rem;
-    }
-
-    #footer-site .ft-redes .localizacao span {
-        font-size: 0.8rem;
-    }
-
-    #footer-site .maps {
-        margin: 40px 0;
+    /*** MODALIDADES ***/
+    main #servicos .modalidades {
         width: 100%;
-        border-radius: 24px;
-        height: 260px;
+        margin-top: 70px;
     }
 
-    #footer-site .ft-logo {
-        margin: 120px 0 0;
+    main #servicos .modalidades h5 {
+        font-size: 30px;
+        margin-top: 0;
     }
 
-    #footer-site .ft-logo img {
+    main #servicos .modalidades .items {
+        display: none;
+    }
+
+    main #servicos .modalidades .items_mobile {
+        display: block;
+        font-size: 20px;
+    }
+
+    /*** Serviços ***/
+    main #servicos h2 {
+        width: 100%;
+        font-size: 32px;
+        margin-top: 60px;
+        padding: 0;
+    }
+
+    main #servicos .saiba_mais {
+        margin: 60px 0 25px;
+        padding: 20px;
+        font-size: 30px;
+    }
+
+    main #servicos .saiba_mais img {
+        width: 33px;
+    }
+
+    /*========================= DIFERENCIAIS =============================*/
+    main #diferenciais {
+        padding: 0;
+    }
+
+    main #diferenciais .bloco_1 {
+        width: 100%;
+        padding: 60px 30px;
+        gap: 40px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main #diferenciais .bloco_1 .item {
+        margin-top: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    main #diferenciais .bloco_1 .item .icone {
+        width: 120px;
+        height: 120px;
+        padding: 20px 0;
+    }
+
+    main #diferenciais .bloco_1 .item .icone img {
+        width: 80px;
+    }
+
+    main #diferenciais .bloco_1 .item .textos {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    main #diferenciais .bloco_1 .item .textos .detalhe {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    main #diferenciais .bloco_1 .item .textos h4,
+    main #diferenciais .bloco_1 .item .textos h5 {
+        font-size: 25px;
+        line-height: 27px;
+    }
+
+    main #diferenciais .bloco_1 .item .textos .horas p,
+    main #diferenciais .bloco_1 .item .textos .horas span {
+        font-size: 72px;
+        line-height: 68px;
+    }
+
+    main #diferenciais .bloco_1 .item .textos .paragrafos {
+        gap: 12px;
+    }
+
+    main #diferenciais .bloco_1 .item .textos .paragrafos p {
+        font-size: 20px;
+    }
+
+    main #diferenciais .bloco_2 {
+        width: 100%;
+        padding: 60px 30px;
+        gap: 30px;
+    }
+
+    main #diferenciais .bloco_2 .texto_1 {
+        font-size: 23px;
+        line-height: 30px;
+        font-weight: 700;
+    }
+
+    main #diferenciais .bloco_2 .texto_2 {
+        font-size: 20px;
+    }
+
+    main #diferenciais .bloco_2 .texto_2 span {
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    /*========================= PORTFÓLIO =============================*/
+    main #portfolio .galeria {
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    main #portfolio .galeria img {
+        height: 220px;
+    }
+
+
+    /*========================= CLIENTES =============================*/
+    main #clientes {
+        padding: 80px 30px;
+    }
+
+    main #clientes .infos .icon {
+        display: none;
+    }
+
+    main #clientes .infos .textos {
+        width: 100%;
+    }
+
+    main #clientes .infos .textos .p1, main #clientes .infos .textos .p2 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    main #clientes .infos .textos .p3 {
+        margin-top: 25px;
+        font-size: 23px;
+        text-align: center;
+    }
+
+    main #clientes .marcas {
+        display: none;
+    }
+
+    main #clientes .marcas_mobile {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+
+    main #clientes .marcas_mobile img {
+        width: 100%;
+        align-self: center;
+        justify-self: center;
+    }
+
+    /*========================= CONTATO =============================*/
+    main #contato {
+        padding: 0;
+    }
+
+    main #contato .content-fixed {
+        margin: 0;
+        border-radius: 0;
+
+    }
+
+    main #contato .titulo {
+        padding: 30px;
+    }
+
+    main #contato .titulo span {
+        font-size: 22px;
+        font-weight: 500;
+        margin: 0;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    main #contato form {
+        padding: 30px 30px 60px;
+    }
+
+    main #contato form input,
+    main #contato form textarea {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    main #contato form textarea {
+        max-height: 100px;
+    }
+
+    main #contato form #enviar_form_contato {
+        width: 100%;
+        height: auto;
+        padding: 12px;
+        font-size: 22px;
+        margin-top: 2px;
+    }
+
+    /*========================= ONDE ESTAMOS =============================*/
+    main #onde_estamos {
+        min-height: auto;
+        background-image: url(../imgs/mapa_mobile.jpg);
+        padding: 60px 30px 100px;
+    }
+
+    main #onde_estamos .content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    main #onde_estamos .content .titulo .detalhe {
+        height: 4px;
+    }
+
+    main #onde_estamos .content .infos .bold {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 6px;
+    }
+
+    main #onde_estamos .content .infos span {
+        font-size: 14px;
+    }
+
+    main #onde_estamos .content .infos img {
+        max-width: 32px;
+    }
+
+    /*========================= FOOTER =============================*/
+    #footer-site {
+        padding: 100px 30px;
+    }
+
+    #footer-site .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footer-site .content .logo {
+        margin: 0 auto 100px 10%;
         width: 80%;
     }
 
-    #footer-site .copyright {
-        margin-top: 120px;
-        font-size: 0.8rem;
+    #footer-site .content .item {
+
+    }
+
+    #footer-site .content .item img {
+        max-width: 22px;
+    }
+
+    #footer-site .content .item p,
+    #footer-site .content .item span {
+        font-size: 20px;
+        line-height: 32px;
+        word-break: break-all;
+    }
+
+    #footer-site .content p.follow {
+        font-weight: 500;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        font-size: 20px;
+        padding-left: 45px;
+        line-height: 24px;
+        word-break: break-all;
     }
 }
