@@ -348,6 +348,21 @@
                 </div>
             </div>
 
+            <div class="marcas_mobile">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/ml.png' ?>" alt="">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/dhl.png' ?>" alt="">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/renner.png' ?>" alt="">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/americanas.png' ?>" alt="">
+
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/pitagoras.png' ?>" alt="">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sampaio.png' ?>" alt="">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/brf.png' ?>" alt="">
+
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/carrefour.png' ?>" alt="">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sams.png' ?>" alt="">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/salta.png' ?>" alt="">
+            </div>
+
         </div>
     </section>
 

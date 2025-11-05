@@ -131,10 +131,10 @@ p {
 #menu-principal li a,
 #menu-principal li a b {
     color: var(--color-primary);
-    font-size: 1.576rem;
+    font-size: 1.2rem;
     transition: 0.2s all;
     text-transform: uppercase;
-    letter-spacing: 0.03rem;
+    letter-spacing: 0.07rem;
     display: flex;
     gap: 18px;
     padding-left: 18px;
@@ -245,11 +245,11 @@ main .introducao strong {
 }
 
 main .introducao h3 {
-    font-size: 40px;
+    font-size: 37px;
 }
 
 main .introducao h4 {
-    font-size: 25px;
+    font-size: 23px;
 }
 
 /*** SOBRE ***/
@@ -272,7 +272,7 @@ main #sobre .sobre-info {
 }
 
 main #sobre .sobre-info h3 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 900;
     text-transform: uppercase;
     text-align: center;
@@ -294,7 +294,7 @@ main #sobre .sobre-info .texto {
 }
 
 main #sobre .sobre-info .texto p {
-    font-size: 35px;
+    font-size: 29px;
     line-height: 59px;
 }
 
@@ -320,7 +320,7 @@ main #sobre .sobre-bases .fileira .informacao {
 }
 
 main #sobre .sobre-bases .fileira .icone {
-    height: 200px;
+    height: 180px;
     border-bottom: 1px solid var(--color-secondary);
 }
 
@@ -331,20 +331,20 @@ main #sobre .sobre-bases .fileira .informacao:not(:last-child) {
 
 main #sobre .sobre-bases .fileira .informacao {
     margin-top: 1px;
-    height: 225px;
+    height: 200px;
     justify-content: flex-start;
     padding: 25px 20px;
 }
 
 main #sobre .sobre-bases .fileira .informacao .titulo {
-    font-size: 32px;
+    font-size: 31px;
     font-weight: bold;
     text-align: center;
 }
 
 main #sobre .sobre-bases .fileira .informacao .texto {
     font-weight: normal;
-    font-size: 27px;
+    font-size: 25px;
     text-align: center;
     line-height: 40px;
 }
@@ -358,7 +358,7 @@ main #sobre .politicas {
 
 main #sobre .politicas h3 {
     font-weight: 900;
-    font-size: 52px;
+    font-size: 45px;
     letter-spacing: 10px;
     margin-bottom: 25px;
 }
@@ -366,7 +366,7 @@ main #sobre .politicas h3 {
 main #sobre .politicas i {
     font-weight: 500;
     font-style: italic;
-    font-size: 32px;
+    font-size: 27px;
 }
 
 main #sobre .politicas strong {
@@ -392,8 +392,8 @@ main #sobre .politicas .items .accordeon .titulo {
     align-items: center;
     border: 1px solid #7883ae;
     border-radius: 16px;
-    padding: 18px 65px;
-    font-size: 35px;
+    padding: 15px 65px;
+    font-size: 28px;
     font-weight: 500;
     cursor: pointer;
 }
@@ -411,13 +411,13 @@ main #sobre .politicas .items .accordeon .content {
 main #sobre .politicas .items .accordeon .content .conteudo,
 main #sobre .politicas .items .accordeon .content .link {
     transition: 0.3s all;
-    font-size: 32px;
-    line-height: 47px;
+    font-size: 26px;
+    line-height: 44px;
     padding: 0 70px;
 }
 
 main #sobre .politicas .items .accordeon .conteudo {
-    margin-top: 32px;
+    margin-top: 20px;
 }
 
 main #sobre .politicas .items .accordeon .content .link {
@@ -462,7 +462,7 @@ main #servicos .detalhe {
 main #servicos h4 {
     padding: 0 20px;
     margin-top: 50px;
-    font-size: 48px;
+    font-size: 35px;
     font-weight: 900;
     text-align: center;
 }
@@ -480,8 +480,7 @@ main #servicos .cards .item {
     border-radius: 27px;
     background: white;
     transition: transform 0.3s ease;
-    min-height: 414px;
-
+    min-height: 368px;
 }
 
 main #servicos .cards .item_central {
@@ -490,7 +489,7 @@ main #servicos .cards .item_central {
 }
 
 main #servicos .cards .item .titulo {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -498,14 +497,14 @@ main #servicos .cards .item .linha {
     width: 100%;
     height: 1px;
     background: var(--color-primary);
-    margin-top: 40px;
+    margin-top: 28px;
 }
 
 main #servicos .cards .item .opcoes {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 32px;
 }
 
 main #servicos .cards .item .opcoes div {
@@ -515,10 +514,10 @@ main #servicos .cards .item .opcoes div {
 }
 
 main #servicos .cards .item .opcoes div span {
-    font-size: 30px;
+    font-size: 25px;
     color: #727272;
     display: inline-block;
-    margin-top: -13px;
+    margin-top: -8px;
 }
 
 main #servicos .cards .item .opcoes div img {
@@ -534,13 +533,13 @@ main #servicos .modalidades {
 
 main #servicos .modalidades h5 {
     margin-top: 60px;
-    font-size: 48px;
+    font-size: 39px;
     font-weight: 900;
     text-align: center;
 }
 
 main #servicos .modalidades .items {
-    font-size: 34px;
+    font-size: 27px;
     text-align: center;
 }
 
@@ -548,7 +547,7 @@ main #servicos .modalidades .items_mobile {
     display: none;
 }
 
-main #servicos .modalidades .items b ,
+main #servicos .modalidades .items b,
 main #servicos .modalidades .items_mobile b {
     color: var(--color-secondary);
 }
@@ -557,20 +556,20 @@ main #servicos h2 {
     margin-top: 110px;
     color: var(--color-secondary);
     text-align: center;
-    font-size: 67px;
+    font-size: 50px;
     font-weight: 900;
-    padding: 0 70px;
+    padding: 0 130px;
 }
 
 main #servicos .saiba_mais {
     margin: 110px auto 0;
     border: none;
     width: 100%;
-    padding: 35px;
+    padding: 24px 35px;
     border-radius: 9px;
     color: #fff;
     background: var(--color-secondary);
-    font-size: 34px;
+    font-size: 32px;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -626,7 +625,7 @@ main #diferenciais .bloco_1 .item .textos {
 }
 
 main #diferenciais .bloco_1 .item .textos h4 {
-    font-size: 37px;
+    font-size: 34px;
     font-weight: 500;
     color: #fff;
 }
@@ -638,7 +637,7 @@ main #diferenciais .bloco_1 .item:first-child .textos h4 {
 
 main #diferenciais .bloco_1 .item .textos .horas p,
 main #diferenciais .bloco_1 .item .textos .horas span {
-    font-size: 125px;
+    font-size: 100px;
     font-weight: 900;
     color: #fff;
     text-align: center;
@@ -650,7 +649,7 @@ main #diferenciais .bloco_1 .item .textos .horas span {
 }
 
 main #diferenciais .bloco_1 .item .textos h5 {
-    font-size: 33px;
+    font-size: 30px;
     font-weight: normal;
     color: #fff;
     text-align: center;
@@ -674,7 +673,7 @@ main #diferenciais .bloco_1 .item .textos .paragrafos {
 
 main #diferenciais .bloco_1 .item .textos .paragrafos p {
     color: #fff;
-    font-size: 25px;
+    font-size: 23px;
     font-weight: normal;
 }
 
@@ -691,7 +690,7 @@ main #diferenciais .bloco_2 {
 
 main #diferenciais .bloco_2 .texto_1 {
     font-weight: 900;
-    font-size: 46px;
+    font-size: 40px;
     color: #fff;
     text-align: center;
     line-height: 53px;
@@ -699,7 +698,7 @@ main #diferenciais .bloco_2 .texto_1 {
 
 main #diferenciais .bloco_2 .texto_2 {
     font-weight: normal;
-    font-size: 38px;
+    font-size: 32px;
     color: #fff;
     text-align: center;
     margin-top: 31px;
@@ -741,29 +740,29 @@ main #clientes .infos {
 }
 
 main #clientes .infos .icon {
-    width: 100px;
-    height: 100px;
+    width: 96px;
+    height: 96px;
     flex-shrink: 0;
     background: var(--color-secondary);
 }
 
 main #clientes .infos .textos .p1,
 main #clientes .infos .textos .p2 {
-    font-size: 60px;
+    font-size: 51px;
 }
 
 main #clientes .infos .textos .p1 {
-    line-height: 45px;
+    line-height: 46px;
 }
 
 main #clientes .infos .textos .p2 {
     font-weight: 900;
-    line-height: 66px;
+    line-height: 60px;
 }
 
 main #clientes .infos .textos .p3 {
     margin-top: 32px;
-    font-size: 30px;
+    font-size: 27px;
 }
 
 /*** Marcas ***/
@@ -773,6 +772,10 @@ main #clientes .marcas {
     display: flex;
     flex-direction: column;
     gap: 50px;
+}
+
+main #clientes .marcas_mobile {
+    display: none;
 }
 
 main #clientes .marcas .linha {
@@ -821,10 +824,10 @@ main #contato .titulo {
 
 main #contato .titulo span {
     color: #fff;
-    font-size: 40px;
+    font-size: 37px;
     font-weight: 900;
     display: block;
-    margin-bottom: -14px;
+    margin-bottom: -10px;
 }
 
 main #contato form {
@@ -902,7 +905,7 @@ main #onde_estamos .content .titulo {
 }
 
 main #onde_estamos .content .titulo span {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 900;
     color: var(--color-secondary);
     text-transform: uppercase;
@@ -935,7 +938,7 @@ main #onde_estamos .content .infos img {
 
 main #onde_estamos .content .infos .bold {
     font-weight: 400;
-    font-size: 22px;
+    font-size: 20px;
     color: #fff;
     line-height: 30px;
 }
@@ -943,7 +946,7 @@ main #onde_estamos .content .infos .bold {
 main #onde_estamos .content .infos span {
     color: #fff;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
     display: block;
 }
