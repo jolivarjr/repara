@@ -3,6 +3,9 @@
 // desabilita editor de tema
 const DISALLOW_FILE_EDIT = true;
 
+// desabilita barra de admin do wordpress
+add_filter('show_admin_bar', '__return_false');
+
 // setup do tema
 add_action('after_setup_theme', 'mj_settings_theme');
 function mj_settings_theme(): void

@@ -37,7 +37,7 @@ function enviar_formulario_contato()
         }
         //passou na validação
         else {
-            $to = SITE_OPTIONS['email_site'] ?? "contato@site.com.br";
+            $to = SITE_OPTIONS['email_site'] ?? "comercial.1@repara.eng.br";
 
             $body = "<p><strong>Nome: " . sanitize_text_field($_POST['nome']) . "</strong></p>";
             $body .= "<p><strong>E-mail: " . sanitize_text_field($_POST['telefone']) . "</strong></p>";
