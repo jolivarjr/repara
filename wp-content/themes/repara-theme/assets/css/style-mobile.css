@@ -1,4 +1,3 @@
-
 /* MOBILE HEADER */
 @media screen and (max-width: 1080px) {
     .content-fixed,
@@ -164,6 +163,7 @@
 
     .slider-content-home .slider-adicional .botao {
         width: 140px !important;
+        height: auto !important;
     }
 
     /*========================= MAIN =============================*/
