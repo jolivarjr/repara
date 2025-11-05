@@ -5,17 +5,17 @@
 
 <main>
     <section class="introducao">
-        <h3>Engenharia aplicada, <strong>soluções que transformam.</strong></h3>
-        <h4>Mais de 8 anos de experiência em engenharia e manutenção industrial.</h4>
+        <h3 data-aos="fade-left">Engenharia aplicada, <strong>soluções que transformam.</strong></h3>
+        <h4 data-aos="fade-right">Mais de 8 anos de experiência em engenharia e manutenção industrial.</h4>
     </section>
 
     <section id="sobre">
         <div class="sobre-info content-fixed">
-            <h3>Sobre Nós</h3>
+            <h3 data-aos="fade-down">Sobre Nós</h3>
 
-            <div class="detalhe"></div>
+            <div data-aos="fade-left" class="detalhe"></div>
 
-            <div class="texto">
+            <div data-aos="fade-right" class="texto">
                 <p>
                     A REPARA nasceu com o propósito de entregar soluções completas, modernas e confiáveis em
                     engenharia e facilities. Desde o início, temos como essência a <b>agilidade, a qualidade e a
@@ -38,27 +38,31 @@
 
         <div class="sobre-bases">
 
-            <div class="fileira">
-                <div class="icone"><img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/bandeira.png' ?>" alt=""></div>
-                <div class="icone"><img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/predio.png' ?>" alt=""></div>
-                <div class="icone"><img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/network.png' ?>" alt=""></div>
-                <div class="icone"><img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/brazil.png' ?>" alt=""></div>
+            <div data-aos="fade-down-right" class="fileira">
+                <div data-aos="<?= wp_is_mobile() ? 'fade-down-right' : '' ?>" class="icone"><img
+                            src="<?= MJ_TEMPLATE_URL . '/assets/imgs/bandeira.png' ?>" alt=""></div>
+                <div data-aos="<?= wp_is_mobile() ? 'fade-down-left' : '' ?>" class="icone"><img
+                            src="<?= MJ_TEMPLATE_URL . '/assets/imgs/predio.png' ?>" alt=""></div>
+                <div data-aos="<?= wp_is_mobile() ? 'fade-down-right' : '' ?>" class="icone"><img
+                            src="<?= MJ_TEMPLATE_URL . '/assets/imgs/network.png' ?>" alt=""></div>
+                <div data-aos="<?= wp_is_mobile() ? 'fade-down-left' : '' ?>" class="icone"><img
+                            src="<?= MJ_TEMPLATE_URL . '/assets/imgs/brazil.png' ?>" alt=""></div>
             </div>
 
-            <div class="fileira">
-                <div class="informacao">
+            <div data-aos="fade-down-left" class="fileira">
+                <div data-aos="<?= wp_is_mobile() ? 'fade-up-right' : '' ?>" class="informacao">
                     <div class="titulo">FUNDAÇÃO</div>
                     <div class="texto">
                         2017
                     </div>
                 </div>
-                <div class="informacao">
+                <div data-aos="<?= wp_is_mobile() ? 'fade-up-left' : '' ?>" class="informacao">
                     <div class="titulo">SEDE</div>
                     <div class="texto">
                         Belém-PA
                     </div>
                 </div>
-                <div class="informacao">
+                <div data-aos="<?= wp_is_mobile() ? 'fade-up-right' : '' ?>" class="informacao">
                     <div class="titulo">BASES</div>
                     <div class="texto">
                         São Luiz-MA <br>
@@ -66,7 +70,7 @@
                         São Paulo-SP
                     </div>
                 </div>
-                <div class="informacao">
+                <div data-aos="<?= wp_is_mobile() ? 'fade-up-left' : '' ?>" class="informacao">
                     <div class="titulo">PRESENÇA</div>
                     <div class="texto">
                         24 Estados
@@ -78,12 +82,12 @@
         </div>
 
         <div class="politicas content-fixed">
-            <h3>POLÍTICAS</h3>
-            <i>Compromisso com <strong>pessoas, qualidade, segurança e proteção de dados.</strong></i>
+            <h3 data-aos="flip-up">POLÍTICAS</h3>
+            <i data-aos="fade-left">Compromisso com <strong>pessoas, qualidade, segurança e proteção de dados.</strong></i>
 
             <div class="items">
 
-                <div class="accordeon">
+                <div data-aos="zoom-in-up" class="accordeon">
                     <div class="titulo">Recursos Humanos <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/seta.png' ?>"
                                                               alt=""></div>
                     <div class="content">
@@ -97,7 +101,7 @@
                     </div>
                 </div>
 
-                <div class="accordeon">
+                <div data-aos="zoom-in-down" class="accordeon">
                     <div class="titulo">Qualidade <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/seta.png' ?>" alt="">
                     </div>
                     <div class="content">
@@ -111,7 +115,7 @@
                     </div>
                 </div>
 
-                <div class="accordeon">
+                <div data-aos="zoom-in-left" class="accordeon">
                     <div class="titulo">Segurança e Proteção de Dados <img
                                 src="<?= MJ_TEMPLATE_URL . '/assets/imgs/seta.png' ?>" alt=""></div>
                     <div class="content">
@@ -134,17 +138,17 @@
 
     <section id="servicos">
         <div class="content-fixed">
-            <h3>SERVIÇOS</h3>
-            <div class="detalhe"></div>
+            <h3 data-aos="zoom-out-right">SERVIÇOS</h3>
+            <div data-aos="fade-down" class="detalhe"></div>
 
-            <h4>
+            <h4 data-aos="zoom-out-left">
                 Soluções completas em engenharia e facilities,
                 com a qualidade e inovação que seu negócio precisa
                 para crescer com segurança
             </h4>
 
             <div class="cards">
-                <div class="item item_side">
+                <div data-aos="fade-left" class="item item_side">
                     <div class="titulo">LIMPEZA</div>
                     <div class="linha"></div>
 
@@ -163,7 +167,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="item item_central">
+
+                <div data-aos="fade-up" class="item item_central">
                     <div class="titulo">MANUTENÇÃO</div>
                     <div class="linha"></div>
 
@@ -186,7 +191,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item item_side">
+                <div data-aos="fade-right" class="item item_side">
                     <div class="titulo">ENGENHARIA</div>
                     <div class="linha"></div>
 
@@ -203,25 +208,26 @@
                 </div>
             </div>
 
-            <div class="modalidades">
+            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="modalidades">
                 <h5>Modalidades</h5>
                 <div class="items">
                     Spot (pontual) <b>•</b> Recorrente com equipe volante <b>•</b> Recorrente com equipe fixa
                 </div>
 
-                <div class="items_mobile">
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                     class="items_mobile">
                     <b>•</b> Spot (pontual)<br>
                     <b>•</b> Recorrente com equipe volante<br>
                     <b>•</b> Recorrente com equipe fixa
                 </div>
             </div>
 
-            <h2>
+            <h2 data-aos="fade-right">
                 Mais de 100 pontos
                 de atendimento em todo o Brasil
             </h2>
 
-            <a target="_blank" href="<?= SITE_OPTIONS['link_contato'] ?? "#" ?>" class="saiba_mais">
+            <a data-aos="fade-up" target="_blank" href="<?= SITE_OPTIONS['link_contato'] ?? "#" ?>" class="saiba_mais">
                 <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/wpp-white.png' ?>" alt="">
                 SAIBA MAIS
             </a>
@@ -231,11 +237,11 @@
         <div class="bloco_1">
 
             <div class="item">
-                <div class="icone">
+                <div data-aos="fade-down-right" class="icone">
                     <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/24horas.png' ?>" alt="">
                 </div>
 
-                <div class="textos">
+                <div data-aos="fade-up-right" class="textos">
                     <h4>ATENDIMENTO</h4>
                     <div class="horas">
                         <p>24<span>H</span></p>
@@ -247,11 +253,11 @@
             </div>
 
             <div class="item">
-                <div class="icone">
+                <div data-aos="fade-up" class="icone">
                     <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/equipe.png' ?>" alt="">
                 </div>
 
-                <div class="textos">
+                <div data-aos="fade-down" class="textos">
                     <h4>EQUIPE</h4>
                     <div class="detalhe"></div>
                     <div class="paragrafos">
@@ -265,11 +271,11 @@
             </div>
 
             <div class="item">
-                <div class="icone">
+                <div data-aos="fade-down-left" class="icone">
                     <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/gear.png' ?>" alt="">
                 </div>
 
-                <div class="textos">
+                <div data-aos="fade-up-left" class="textos">
                     <h4>GESTÃO</h4>
                     <div class="detalhe"></div>
                     <div class="paragrafos">
@@ -283,12 +289,12 @@
 
         <div class="bloco_2">
             <div class="content-fixed">
-                <div class="texto_1">
+                <div data-aos="fade-left" class="texto_1">
                     Processos ágeis e eficientes,
                     garantindo resposta imediata às necessidades do cliente:
                 </div>
 
-                <div class="texto_2">
+                <div data-aos="fade-right" class="texto_2">
                     • Agilidade na contratação e alocação de pessoas <br><span></span>
                     • Rapidez na disponibilização de materiais e equipamentos
                 </div>
@@ -317,7 +323,7 @@
                         $mobile_images_found = true;
                         ?>
                         <div class="container_foto">
-                            <img src="<?= $image_url ?>" alt="" class="port_foto">
+                            <img data-aos="zoom-in" src="<?= $image_url ?>" alt="" class="port_foto">
                         </div>
                         <?php
                     }
@@ -335,9 +341,9 @@
                 <div class="icon"></div>
 
                 <div class="textos">
-                    <p class="p1">NOSSOS</p>
-                    <p class="p2">CLIENTES</p>
-                    <p class="p3">
+                    <p data-aos="fade-down" class="p1">NOSSOS</p>
+                    <p data-aos="fade-up" class="p2">CLIENTES</p>
+                    <p data-aos="fade-left" class="p3">
                         Ao longo da nossa trajetória, conquistamos a confiança de empresas
                         de diversos setores. Cada cliente é um parceiro estratégico, e juntos construímos histórias de
                         sucesso pautadas em qualidade e inovação.
@@ -347,45 +353,65 @@
 
             <div class="marcas">
                 <div class="linha linha-4">
-                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/ml.png' ?>" alt="">
-                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/dhl.png' ?>" alt="">
-                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/renner.png' ?>" alt="">
-                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/americanas.png' ?>" alt="">
+                    <img data-aos="zoom-in-up" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/ml.png' ?>"
+                         alt="">
+                    <img data-aos="zoom-in-down" class="item"
+                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/dhl.png' ?>" alt="">
+                    <img data-aos="zoom-in-up" class="item"
+                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/renner.png' ?>" alt="">
+                    <img data-aos="zoom-in-down" class="item"
+                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/americanas.png' ?>" alt="">
                 </div>
 
                 <div class="linha linha-2">
-                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/pitagoras.png' ?>" alt="">
-                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sampaio.png' ?>" alt="">
-                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/brf.png' ?>" alt="">
+                    <img data-aos="fade-right" class="item"
+                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/pitagoras.png' ?>" alt="">
+                    <img data-aos="fade-left" class="item"
+                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sampaio.png' ?>" alt="">
+                    <img data-aos="fade-right" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/brf.png' ?>"
+                         alt="">
                 </div>
 
                 <div class="linha linha-3">
-                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/carrefour.png' ?>" alt="">
-                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sams.png' ?>" alt="">
-                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/salta.png' ?>" alt="">
+                    <img data-aos="zoom-in-left" class="item"
+                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/carrefour.png' ?>" alt="">
+                    <img data-aos="zoom-in-right" class="item"
+                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sams.png' ?>" alt="">
+                    <img data-aos="zoom-in-left" class="item"
+                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/salta.png' ?>" alt="">
                 </div>
             </div>
 
             <div class="marcas_mobile">
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/ml.png' ?>" alt="">
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/dhl.png' ?>" alt="">
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/renner.png' ?>" alt="">
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/americanas.png' ?>" alt="">
+                <img data-aos="zoom-in-up" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/ml.png' ?>"
+                     alt="">
+                <img data-aos="zoom-in-down" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/dhl.png' ?>"
+                     alt="">
+                <img data-aos="zoom-in-up" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/renner.png' ?>"
+                     alt="">
+                <img data-aos="zoom-in-down" class="item"
+                     src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/americanas.png' ?>" alt="">
 
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/pitagoras.png' ?>" alt="">
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sampaio.png' ?>" alt="">
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/brf.png' ?>" alt="">
+                <img data-aos="fade-right" class="item"
+                     src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/pitagoras.png' ?>" alt="">
+                <img data-aos="fade-left" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sampaio.png' ?>"
+                     alt="">
+                <img data-aos="fade-right" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/brf.png' ?>"
+                     alt="">
 
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/carrefour.png' ?>" alt="">
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sams.png' ?>" alt="">
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/salta.png' ?>" alt="">
+                <img data-aos="zoom-in-left" class="item"
+                     src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/carrefour.png' ?>" alt="">
+                <img data-aos="zoom-in-right" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sams.png' ?>"
+                     alt="">
+                <img data-aos="zoom-in-left" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/salta.png' ?>"
+                     alt="">
             </div>
 
         </div>
     </section>
 
     <section id="contato">
-        <div class="content-fixed">
+        <div class="content-fixed" data-aos="fade-up" data-aos-duration="1500">
             <div class="titulo"><span>Contato/Orçamento</span></div>
             <form>
                 <input type="text" id="nome" placeholder="Nome:">
@@ -403,11 +429,11 @@
         <div class="content">
 
             <div class="titulo">
-                <span>onde estamos</span>
-                <div class="detalhe"></div>
+                <span data-aos="fade-left" data-aos-duration="1500">onde estamos</span>
+                <div data-aos="fade-right" data-aos-duration="1500" class="detalhe"></div>
             </div>
 
-            <div class="infos">
+            <div data-aos="fade-up" data-aos-duration="1500" class="infos">
                 <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/o_location.png' ?>" alt="">
                 <div class="textos">
                     <p class="bold">

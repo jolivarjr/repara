@@ -1,26 +1,26 @@
 <footer id="footer-site">
     <div class="content">
 
-        <img class="logo" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/logo-rodape.png' ?>" alt="">
+        <img data-aos="zoom-in-up" class="logo" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/logo-rodape.png' ?>" alt="">
 
-        <div class="item">
+        <div data-aos="fade-left" class="item">
             <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/wpp-footer.png' ?>" alt="">
             <p><?= SITE_OPTIONS['telefone_site'] ?? '-' ?></p>
         </div>
 
-        <div class="item">
+        <div data-aos="fade-right" class="item">
             <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/email-footer.png' ?>" alt="">
             <span><?= SITE_OPTIONS['email_site'] ?? '-' ?></span>
         </div>
 
-        <p class="follow">Siga nossas redes sociais:</p>
+        <p data-aos="fade-left" class="follow">Siga nossas redes sociais:</p>
 
-        <div class="item">
+        <div data-aos="fade-right" class="item">
             <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/instagram-footer.png' ?>" alt="">
             <span><?= SITE_OPTIONS['instagram_site'] ?? '-' ?></span>
         </div>
 
-        <div class="item">
+        <div data-aos="fade-left" class="item">
             <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/linkedin-footer.png' ?>" alt="">
             <span><?= SITE_OPTIONS['linkedin_site'] ?? '-' ?></span>
         </div>

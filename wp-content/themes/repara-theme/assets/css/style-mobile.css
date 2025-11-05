@@ -143,6 +143,32 @@
         right: 20px;
     }
 
+    .slider-content-home .slider-adicional {
+        gap: 11px;
+        position: absolute;
+        top: calc(50% + 5px);
+        left: calc(50% - (216px / 2));
+        z-index: 10000;
+    }
+
+    .slider-content-home .slider-adicional .s-texto {
+        gap: 14px;
+    }
+
+    .slider-content-home .slider-adicional .s-texto .detalhe {
+        width: 6px;
+        height: 40px;
+        margin-left: -21px;
+    }
+
+    .slider-content-home .slider-adicional .s-texto img {
+        width: 240px !important;
+    }
+
+    .slider-content-home .slider-adicional .botao {
+        width: 140px !important;
+    }
+
     /*========================= MAIN =============================*/
     main .introducao {
         height: auto;
@@ -494,11 +520,11 @@
 
     /*========================= PORTFÓLIO =============================*/
     main #portfolio .galeria {
-        grid-template-columns:repeat(2, 1fr);
+        grid-template-columns:repeat(3, 1fr);
     }
 
     main #portfolio .galeria .container_foto {
-        height: 220px;
+        height: 180px;
     }
 
 
@@ -534,11 +560,11 @@
         margin-top: 50px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 50px;
+        gap: 30px;
     }
 
     main #clientes .marcas_mobile img {
-        width: 100%;
+        width: 110px;
         align-self: center;
         justify-self: center;
     }

@@ -6,7 +6,9 @@ jQuery(window).on('load', function () {
 
 // ready
 jQuery(document).ready(function () {
-    AOS.init({duration: 1100, once: true, delay: 0});
+    setTimeout(function () {
+        AOS.init({duration: 1100, once: true, delay: 0});
+    }, 300)
 
     // Escuta os eventos específicos do collapse do Bootstrap
     const navcollapese = jQuery('.navbar-collapse');
