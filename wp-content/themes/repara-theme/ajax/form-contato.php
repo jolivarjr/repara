@@ -34,10 +34,13 @@ function enviar_formulario_contato()
         if ($msg_error != '') {
             echo $msg_error;
             exit;
-        }
-        //passou na validação
+        } //passou na validação
         else {
-            $to = SITE_OPTIONS['email_site'] ?? "comercial.1@repara.eng.br";
+            $to = ["site@repara.eng.br"];
+
+            if (!empty(SITE_OPTIONS['email_site'])) {
+                $to[] = SITE_OPTIONS['email_site'];
+            }
 
             $body = "<p><strong>Nome: " . sanitize_text_field($_POST['nome']) . "</strong></p>";
             $body .= "<p><strong>E-mail: " . sanitize_text_field($_POST['telefone']) . "</strong></p>";
