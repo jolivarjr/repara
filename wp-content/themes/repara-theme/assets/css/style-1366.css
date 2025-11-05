@@ -4,4 +4,58 @@
         height: 700px;
     }
 
+    .slider-content-home .slider-adicional {
+        gap: 30px;
+        left: calc(50% - (480px / 2));
+    }
+
+    .slider-content-home .slider-adicional .s-texto .detalhe {
+        height: 85px;
+    }
+
+    .slider-content-home .slider-adicional .s-texto img {
+        width: 500px !important;
+    }
+
+    .slider-content-home .slider-adicional .botao {
+        width: auto !important;
+        height: 60px !important;
+    }
+
+    /* =========================== introdução =========================== */
+
+    /* =========================== sobre =========================== */
+    main #sobre .sobre-info h3 {
+        font-size: 32px;
+    }
+
+    main #sobre .sobre-info .texto {
+        gap: 70px;
+    }
+
+    main #sobre .sobre-info .texto p {
+        font-size: 24px;
+        line-height: 42px;
+    }
+    /* =========================== contato =========================== */
+    main #contato .content-fixed {
+        width: 850px;
+        margin-top: -59px;
+    }
+
+    main #contato .titulo span {
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    /* =========================== onde estamos =========================== */
+    main #onde_estamos {
+        background-size: 1366px auto;
+        background-color: #081327;
+    }
+
+    /* =========================== footer =========================== */
+    #footer-site {
+        padding: 250px 30px;
+    }
 }
