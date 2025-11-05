@@ -1,5 +1,49 @@
 <?php
 
+// defer css e js
+add_filter('style_loader_tag', function ($html, $handle) {
+
+    // nomes dos estilos que você quer "desbloquear"
+    $defer_styles = [
+        'bootstrap-padrao',
+        'fontawesome',
+        'owlcss',
+        'aos-css',
+//        'style_theme',
+        'view_theme'
+    ];
+
+    if (in_array($handle, $defer_styles)) {
+
+        // transforma o link em preload + ativa depois
+        $html = str_replace("rel='stylesheet'", "rel='preload' as='style' onload=\"this.rel='stylesheet'\"", $html);
+    }
+
+    return $html;
+
+}, 10, 2);
+
+add_action('wp_enqueue_scripts', function () {
+    wp_dequeue_style('wp-block-library');
+    wp_dequeue_style('wp-block-library-theme');
+    wp_dequeue_style('global-styles');
+}, 100);
+
+add_action('wp_enqueue_scripts', function () {
+    if (!is_admin()) {
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', includes_url('/js/jquery/jquery.min.js'), [], null, true);
+        wp_enqueue_script('jquery');
+    }
+}, 100);
+
+add_filter('wp_default_scripts', function ($scripts) {
+    if (!is_admin() && isset($scripts->registered['jquery'])) {
+        $scripts->registered['jquery']->deps = [];
+    }
+});
+
+
 // desabilita editor de tema
 const DISALLOW_FILE_EDIT = true;
 

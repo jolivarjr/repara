@@ -208,14 +208,13 @@
                 </div>
             </div>
 
-            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="modalidades">
+            <div data-aos="fade-left" class="modalidades">
                 <h5>Modalidades</h5>
                 <div class="items">
                     Spot (pontual) <b>•</b> Recorrente com equipe volante <b>•</b> Recorrente com equipe fixa
                 </div>
 
-                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-                     class="items_mobile">
+                <div class="items_mobile">
                     <b>•</b> Spot (pontual)<br>
                     <b>•</b> Recorrente com equipe volante<br>
                     <b>•</b> Recorrente com equipe fixa
@@ -351,59 +350,59 @@
                 </div>
             </div>
 
-            <div class="marcas">
+            <div class="marcas" data-aos="fade-up">
                 <div class="linha linha-4">
-                    <img data-aos="zoom-in-up" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/ml.png' ?>"
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/ml.png' ?>"
                          alt="">
-                    <img data-aos="zoom-in-down" class="item"
+                    <img class="item"
                          src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/dhl.png' ?>" alt="">
-                    <img data-aos="zoom-in-up" class="item"
+                    <img class="item"
                          src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/renner.png' ?>" alt="">
-                    <img data-aos="zoom-in-down" class="item"
+                    <img class="item"
                          src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/americanas.png' ?>" alt="">
                 </div>
 
                 <div class="linha linha-2">
-                    <img data-aos="fade-right" class="item"
+                    <img class="item"
                          src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/pitagoras.png' ?>" alt="">
-                    <img data-aos="fade-left" class="item"
+                    <img class="item"
                          src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sampaio.png' ?>" alt="">
-                    <img data-aos="fade-right" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/brf.png' ?>"
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/brf.png' ?>"
                          alt="">
                 </div>
 
                 <div class="linha linha-3">
-                    <img data-aos="zoom-in-left" class="item"
+                    <img class="item"
                          src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/carrefour.png' ?>" alt="">
-                    <img data-aos="zoom-in-right" class="item"
+                    <img class="item"
                          src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sams.png' ?>" alt="">
-                    <img data-aos="zoom-in-left" class="item"
+                    <img class="item"
                          src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/salta.png' ?>" alt="">
                 </div>
             </div>
 
             <div class="marcas_mobile">
-                <img data-aos="zoom-in-up" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/ml.png' ?>"
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/ml.png' ?>"
                      alt="">
-                <img data-aos="zoom-in-down" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/dhl.png' ?>"
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/dhl.png' ?>"
                      alt="">
-                <img data-aos="zoom-in-up" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/renner.png' ?>"
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/renner.png' ?>"
                      alt="">
-                <img data-aos="zoom-in-down" class="item"
+                <img class="item"
                      src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/americanas.png' ?>" alt="">
 
-                <img data-aos="fade-right" class="item"
+                <img class="item"
                      src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/pitagoras.png' ?>" alt="">
-                <img data-aos="fade-left" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sampaio.png' ?>"
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sampaio.png' ?>"
                      alt="">
-                <img data-aos="fade-right" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/brf.png' ?>"
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/brf.png' ?>"
                      alt="">
 
-                <img data-aos="zoom-in-left" class="item"
+                <img class="item"
                      src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/carrefour.png' ?>" alt="">
-                <img data-aos="zoom-in-right" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sams.png' ?>"
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sams.png' ?>"
                      alt="">
-                <img data-aos="zoom-in-left" class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/salta.png' ?>"
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/salta.png' ?>"
                      alt="">
             </div>
 
