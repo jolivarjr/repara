@@ -4,7 +4,7 @@ $register_slider = new MJRegisterCustomPostType(
     'sliders',
     'Banner',
     'o',
-    ['menu_icon' => 'dashicons-images-alt2', 'supports' => ['title', 'thumbnail']],
+    ['menu_icon' => 'dashicons-images-alt', 'supports' => ['title', 'thumbnail']],
     [],
     'Banners'
 );
