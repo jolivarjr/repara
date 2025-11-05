@@ -497,7 +497,7 @@
         grid-template-columns:repeat(2, 1fr);
     }
 
-    main #portfolio .galeria img {
+    main #portfolio .galeria .container_foto {
         height: 220px;
     }
 

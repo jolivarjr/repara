@@ -298,15 +298,33 @@
 
     <section id="portfolio">
         <div class="galeria">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/1.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/2.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/3.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/4.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/5.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/6.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/7.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/8.jpg' ?>" alt="" class="port_foto">
-            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/galeria/9.jpg' ?>" alt="" class="port_foto">
+            <?php
+            $get_posts_galerias = get_posts(['posts_per_page' => 1, 'post_type' => 'galerias']);
+            $primeiro_post = !empty($get_posts_galerias) ? $get_posts_galerias[0] : null;
+
+            $imagens_ids = !empty($primeiro_post)
+                    ? get_post_meta($primeiro_post->ID, 'imagens', true)
+                    : [];
+
+            if ($imagens_ids) {
+                $image_ids = explode(',', $imagens_ids);
+                $mobile_images_found = false;
+
+                foreach ($image_ids as $image_id) {
+                    $image_data = wp_get_attachment_image_src($image_id, 'large');
+                    if ($image_data) {
+                        $image_url = $image_data[0];
+                        $mobile_images_found = true;
+                        ?>
+                        <div class="container_foto">
+                            <img src="<?= $image_url ?>" alt="" class="port_foto">
+                        </div>
+                        <?php
+                    }
+                }
+            }
+
+            ?>
         </div>
     </section>
 
@@ -450,24 +468,3 @@
 </main>
 
 <?php get_template_part('includes/footer-page'); ?>
-
-
-<!--<div class="content-fixed">-->
-<!--    --><?php //$get_posts_diferenciais = get_posts(['posts_per_page' => -1, 'post_type' => 'diferenciais', 'order' => 'Asc']); ?>
-<!---->
-<!--    --><?php //if ($get_posts_diferenciais) : ?>
-<!--        --><?php //foreach ($get_posts_diferenciais as $diferencial) : ?>
-<!--            <div class="diferencial-item">-->
-<!--                <div class="icon-container" data-aos="fade-up">-->
-<!--                    <img src="--><?php //= get_the_post_thumbnail_url($diferencial->ID, 'full') ?><!--" alt="">-->
-<!--                </div>-->
-<!---->
-<!--                <div class="diferencial-text">-->
-<!--                    <h3 data-aos="fade-right">--><?php //= $diferencial->post_title ?><!--</h3>-->
-<!--                    <p data-aos="fade-left">--><?php //= $diferencial->post_excerpt ?><!--</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        --><?php //endforeach; ?>
-<!--    --><?php //endif; ?>
-<!---->
-<!--</div>-->
