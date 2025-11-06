@@ -37,6 +37,6 @@
 // );
 ?>
 
-<a href="#" id="back-top" class="text-white" title="Voltar para o topo"><i class="fas fa-arrow-up"></i></a>
+<a href="#" id="back-top" class="text-white" title="Voltar para o topo"></a>
 </body>
 </html>

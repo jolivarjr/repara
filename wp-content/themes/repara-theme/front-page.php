@@ -302,34 +302,58 @@
     </section>
 
     <section id="portfolio">
-        <div class="galeria">
-            <?php
-            $get_posts_galerias = get_posts(['posts_per_page' => 1, 'post_type' => 'galerias']);
-            $primeiro_post = !empty($get_posts_galerias) ? $get_posts_galerias[0] : null;
+        <!-- Slider main container -->
+        <div class="swiper portfolio-carousel">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <?php
+                $get_posts_galerias = get_posts(['posts_per_page' => 1, 'post_type' => 'galerias']);
+                $primeiro_post = !empty($get_posts_galerias) ? $get_posts_galerias[0] : null;
 
-            $imagens_ids = !empty($primeiro_post)
+                $imagens_ids = !empty($primeiro_post)
                     ? get_post_meta($primeiro_post->ID, 'imagens', true)
                     : [];
 
-            if ($imagens_ids) {
-                $image_ids = explode(',', $imagens_ids);
-                $mobile_images_found = false;
+                if ($imagens_ids) {
+                    $all_image_ids = explode(',', $imagens_ids);
+                    $slides = array_chunk($all_image_ids, 9); // Agrupa as imagens em conjuntos de 9
 
-                foreach ($image_ids as $image_id) {
-                    $image_data = wp_get_attachment_image_src($image_id, 'large');
-                    if ($image_data) {
-                        $image_url = $image_data[0];
-                        $mobile_images_found = true;
+                    foreach ($slides as $slide_images) {
                         ?>
-                        <div class="container_foto">
-                            <img src="<?= $image_url ?>" alt="" class="port_foto">
+                        <div class="swiper-slide">
+                            <div class="galeria">
+                                <?php
+                                foreach ($slide_images as $image_id) {
+                                    $image_data = wp_get_attachment_image_src($image_id, 'large');
+                                    if ($image_data) {
+                                        $image_url = $image_data[0];
+                                        ?>
+                                        <div class="container_foto">
+                                            <img data-aos="zoom-in" src="<?= $image_url ?>" alt="Foto da galeria de projetos" class="port_foto" loading="lazy">
+                                        </div>
+                                        <?php
+                                    }
+                                }
+                                ?>
+                            </div>
                         </div>
                         <?php
                     }
                 }
-            }
+                ?>
+            </div>
 
+            <?php
+            // Só mostra a navegação se tiver mais de 9 imagens
+            if (isset($all_image_ids) && count($all_image_ids) > 9) :
             ?>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            <?php endif; ?>
         </div>
     </section>
 

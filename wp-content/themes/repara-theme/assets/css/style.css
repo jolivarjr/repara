@@ -4,19 +4,26 @@
 }
 
 #back-top {
-    background: var(--color-secondary);
+    transform: rotate(180deg);
+    background-image: url(../imgs/seta-para-baixo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     position: fixed;
     right: 20px;
     bottom: 20px;
-    padding: 10px 14px 10px 14px;
-    border-radius: 5px;
     z-index: 100;
     box-shadow: 0 10px 40px rgba(19, 31, 56, 0.4);
-    display: none !important;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: 0.2s all;
 }
 
-#back-top i {
-    color: #fff;
+#back-top:hover {
+    bottom: 25px;
+    box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+    filter: brightness(1.1);
 }
 
 html, body {
@@ -729,7 +736,10 @@ main #diferenciais .bloco_2 .texto_2 {
 
 /*** PORTFOLIO ***/
 main #portfolio {
-
+    background: linear-gradient(270deg, rgb(19, 31, 56, 0.3) 0%,
+    rgb(19, 31, 56, 0.2) 30%,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(255, 255, 255, 1) 100%);
 }
 
 main #portfolio .galeria {
@@ -755,6 +765,60 @@ main #portfolio .galeria img {
 
 main #portfolio .galeria img:hover {
     transform: scale(1.15) rotate(2deg);
+}
+
+.portfolio-carousel {
+    position: relative;
+}
+
+.portfolio-carousel .swiper-button-next,
+.portfolio-carousel .swiper-button-prev {
+    color: var(--color-secondary); /* Usa a cor secundária do tema */
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+    background-color: rgba(225, 225, 225, 0.7);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 25px;
+}
+
+.swiper-button-prev:after {
+    margin-left: -3px;
+}
+
+.swiper-button-next:after {
+    margin-left: 3px;
+}
+
+.portfolio-carousel .swiper-button-next:hover,
+.portfolio-carousel .swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.portfolio-carousel .swiper-button-next {
+    right: 25px;
+}
+
+.portfolio-carousel .swiper-button-prev {
+    left: 25px;
+}
+
+.portfolio-carousel .swiper-pagination-bullet {
+    background: var(--color-secondary);
+    width: 12px;
+    height: 12px;
+    opacity: 0.6;
+}
+
+.portfolio-carousel .swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 14px;
+    height: 14px;
 }
 
 /*** CLIENTES ***/

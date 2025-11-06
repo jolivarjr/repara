@@ -166,6 +166,38 @@ jQuery(document).ready(function () {
     })
 })
 
+// Carrossel do portfólio
+jQuery(document).ready(function () {
+    if (jQuery('.portfolio-carousel').length) {
+        // Conta quantos slides existem
+        const totalSlides = jQuery('.portfolio-carousel .swiper-slide').length;
+
+        const swiper = new Swiper('.portfolio-carousel', {
+            // Loop só fica true se tiver mais de 1 slide (mais de 9 fotos)
+            loop: totalSlides > 1,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            slidesPerView: 1,
+            effect: 'slide',
+            speed: 700,
+
+            // Paginação
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Navegação
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    }
+});
+
 
 /*
 
