@@ -7,14 +7,10 @@ function mj_load_css(): void
 //    wp_enqueue_style('fontawesome', MJ_TEMPLATE_URL . '/assets/css/fontawesome.css');
     wp_enqueue_style('owlcss', MJ_TEMPLATE_URL . '/assets/css/owl.carousel.min.css');
     wp_enqueue_style('aos-css', MJ_TEMPLATE_URL . '/assets/css/aos.min.css', [], '2.3.1');
+    wp_enqueue_style('swiper-css', MJ_TEMPLATE_URL . '/assets/css/swiper.min.css', [], '8.4.7');
 
     // Fonte
-    wp_enqueue_style(
-        'mj-fonts-roboto',
-        MJ_TEMPLATE_URL . '/assets/fonts/roboto/stylesheet.css',
-        [],
-        null
-    );
+    wp_enqueue_style('mj-fonts-roboto', MJ_TEMPLATE_URL . '/assets/fonts/roboto/stylesheet.css', [], null);
 
     // CSS base
     wp_enqueue_style('style-base', MJ_TEMPLATE_URL . '/assets/css/style.css', [], null);    // CSS para desktop grande
