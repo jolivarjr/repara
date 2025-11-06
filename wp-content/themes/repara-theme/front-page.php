@@ -302,35 +302,45 @@
     </section>
 
     <section id="portfolio">
-        <div class="galeria">
+        <div class="galeria" id="gallery-container">
             <?php
-            $get_posts_galerias = get_posts(['posts_per_page' => 1, 'post_type' => 'galerias']);
+            $get_posts_galerias = get_posts(['posts_per_page' => 1, 'post_type' => 'galerias', 'orderby' => 'date', 'order' => 'DESC']);
             $primeiro_post = !empty($get_posts_galerias) ? $get_posts_galerias[0] : null;
+            $total_images = 0;
 
-            $imagens_ids = !empty($primeiro_post)
-                    ? get_post_meta($primeiro_post->ID, 'imagens', true)
-                    : [];
+            if ($primeiro_post) {
+                $imagens_ids_str = get_post_meta($primeiro_post->ID, 'imagens', true);
 
-            if ($imagens_ids) {
-                $image_ids = explode(',', $imagens_ids);
-                $mobile_images_found = false;
+                if ($imagens_ids_str) {
+                    $image_ids = explode(',', $imagens_ids_str);
+                    $total_images = count($image_ids);
+                    $images_to_show = array_slice($image_ids, 0, 9);
 
-                foreach ($image_ids as $image_id) {
-                    $image_data = wp_get_attachment_image_src($image_id, 'large');
-                    if ($image_data) {
-                        $image_url = $image_data[0];
-                        $mobile_images_found = true;
-                        ?>
-                        <div class="container_foto">
-                            <img src="<?= $image_url ?>" alt="" class="port_foto">
-                        </div>
-                        <?php
+                    foreach ($images_to_show as $image_id) {
+                        $image_data = wp_get_attachment_image_src($image_id, 'large');
+                        if ($image_data) {
+                            $image_url = $image_data[0];
+                            ?>
+                            <div class="container_foto" data-aos="zoom-in">
+                                <img src="<?= esc_url($image_url) ?>" alt="" class="port_foto">
+                            </div>
+                            <?php
+                        }
                     }
                 }
             }
-
             ?>
         </div>
+
+        <?php if ($total_images > 9) : ?>
+            <div class="carrega-mais-container">
+                <button id="carrega-mais-imagens-btn"
+                        data-post-id="<?= $primeiro_post->ID ?>"
+                        data-total="<?= $total_images ?>">
+                    Carregar mais fotos
+                </button>
+            </div>
+        <?php endif; ?>
     </section>
 
     <section id="clientes">

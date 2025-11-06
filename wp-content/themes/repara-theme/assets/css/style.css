@@ -757,6 +757,33 @@ main #portfolio .galeria img:hover {
     transform: scale(1.15) rotate(2deg);
 }
 
+main #portfolio .carrega-mais-container {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(270deg, rgb(19, 31, 56, 0.3) 0%, rgb(19, 31, 56, 0.2) 30%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);
+}
+
+main #portfolio .carrega-mais-container #carrega-mais-imagens-btn {
+    font-size: 16px;
+    padding:7px 10px;
+    font-weight: 400;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    background: var(--color-primary);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+main #portfolio .carrega-mais-container #carrega-mais-imagens-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(19, 31, 56, 0.4);
+    filter: brightness(1.1);
+}
+
 /*** CLIENTES ***/
 main #clientes {
     padding: 95px 0 350px;

@@ -166,6 +166,60 @@ jQuery(document).ready(function () {
     })
 })
 
+// Galeria Load More
+jQuery(document).ready(function ($) {
+    const loadMoreBtn = $('#carrega-mais-imagens-btn');
+    if (!loadMoreBtn.length) {
+        return;
+    }
+
+    let offset = 9; // Começa carregando a partir da 10ª imagem
+    const galleryContainer = $('#gallery-container');
+    const postId = loadMoreBtn.data('post-id');
+
+    loadMoreBtn.on('click', function () {
+        const button = $(this);
+        button.text('Carregando...').prop('disabled', true);
+
+        $.ajax({
+            url: mj_gallery_ajax.ajax_url,
+            type: 'POST',
+            data: {
+                action: 'mj_load_more_gallery_images',
+                nonce: mj_gallery_ajax.nonce,
+                post_id: postId,
+                offset: offset
+            },
+            success: function (response) {
+                if (response.success && response.data.html) {
+                    const newItems = $(response.data.html);
+                    galleryContainer.append(newItems);
+
+                    // Re-inicializa o AOS para os novos itens
+                    AOS.init({duration: 1100, once: true, delay: 0});
+                    AOS.refresh();
+
+                    offset += 9;
+
+                    if (!response.data.more) {
+                        button.parent().hide();
+                    }
+                } else {
+                    button.parent().hide();
+                }
+            },
+            error: function () {
+                button.text('Erro ao carregar');
+            },
+            complete: function () {
+                if (button.text() !== 'Erro ao carregar') {
+                    button.text('Carregar Mais').prop('disabled', false);
+                }
+            }
+        });
+    });
+});
+
 
 /*
 
