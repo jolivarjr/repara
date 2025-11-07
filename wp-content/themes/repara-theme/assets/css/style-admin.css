@@ -71,6 +71,11 @@
     border: 1px solid #ccc;
 }
 
+.mj-file-thumb .mj-remove-image {
+    top: -3px;
+    right: -17px;
+}
+
 /** Remoções **/
 
 a[href="site-editor.php?p=/pattern"] {

@@ -9,6 +9,7 @@ jQuery(document).ready(function($) {
         var button = $(this);
         var field_name = button.data('fieldName');
         var multiple = button.data('multiple');
+        var file_type = button.data('fileType') || 'image'; // Get the file type
         set_to_post_id = button.data('postId');
 
         // If the media frame already exists, reopen it.
@@ -22,14 +23,17 @@ jQuery(document).ready(function($) {
 
         // Create the media frame.
         file_frame = wp.media.frames.file_frame = wp.media({
-            title: multiple ? 'Selecione as imagens' : 'Selecione uma imagem',
+            title: multiple ? 'Selecione os arquivos' : 'Selecione um arquivo',
             button: {
-                text: multiple ? 'Usar estas imagens' : 'Usar esta imagem'
+                text: multiple ? 'Usar estes arquivos' : 'Usar este arquivo'
+            },
+            library: {
+                type: file_type // Set the library type
             },
             multiple: multiple
         });
 
-        // When an image is selected, run a callback.
+        // When a file is selected, run a callback.
         file_frame.on('select', function() {
             var selection = file_frame.state().get('selection');
             var attachment_ids = $(`#${field_name}`).val();
@@ -44,8 +48,15 @@ jQuery(document).ready(function($) {
                 attachment = attachment.toJSON();
                 if (attachment.id) {
                     attachment_ids = attachment_ids ? attachment_ids + "," + attachment.id : attachment.id;
-                    var attachment_image = attachment.sizes.thumbnail ? attachment.sizes.thumbnail.url : attachment.url;
-                    gallery_container.append('<div class="mj-gallery-thumb"><img src="' + attachment_image + '"/><a href="#" class="mj-remove-image" data-attachment-id="' + attachment.id + '">x</a></div>');
+
+                    // Check if the attachment is an image.
+                    if (attachment.type === 'image') {
+                        var attachment_image = attachment.sizes.thumbnail ? attachment.sizes.thumbnail.url : attachment.url;
+                        gallery_container.append('<div class="mj-gallery-thumb"><img src="' + attachment_image + '"/><a href="#" class="mj-remove-image" data-attachment-id="' + attachment.id + '">x</a></div>');
+                    } else {
+                        // It's not an image, display the filename.
+                        gallery_container.append('<div class="mj-gallery-thumb mj-file-thumb" data-attachment-id="' + attachment.id + '"><span>' + attachment.filename + '</span><a href="#" class="mj-remove-image" data-attachment-id="' + attachment.id + '">x</a></div>');
+                    }
                 }
             });
 
