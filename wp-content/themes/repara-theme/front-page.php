@@ -89,51 +89,32 @@
 
             <div class="items">
 
-                <div data-aos="zoom-in-up" class="accordeon">
-                    <div class="titulo">Recursos Humanos <img class="rotate"
-                                                              src="<?= MJ_TEMPLATE_URL . '/assets/imgs/seta.png' ?>"
-                                                              alt=""></div>
-                    <div class="content hide">
-                        <div class="conteudo">
-                            Valorizamos as pessoas como nosso maior ativo, promovendo um ambiente seguro, ético e
-                            colaborativo, com oportunidades de crescimento e desenvolvimento contínuo.
-                        </div>
-                        <a class="link" target="_blank" href="<?= SITE_OPTIONS['link_politica'] ?? "#" ?>">
-                            [Ler política completa]
-                        </a>
-                    </div>
-                </div>
+                <?php $get_posts = get_posts(['posts_per_page' => -1, 'post_type' => 'politicas_pv']); ?>
+                <?php if ($get_posts) : ?>
+                    <?php foreach ($get_posts as $politica) : ?>
+                        <?php
+                        $attachment_id = get_post_meta($politica->ID, 'arquivo', true);
+                        $link = $attachment_id ? wp_get_attachment_url($attachment_id) : '#';
+                        ?>
 
-                <div data-aos="zoom-in-up" class="accordeon">
-                    <div class="titulo">Qualidade <img class="rotate"
-                                                       src="<?= MJ_TEMPLATE_URL . '/assets/imgs/seta.png' ?>" alt="">
-                    </div>
-                    <div class="content hide">
-                        <div class="conteudo">
-                            Buscamos a excelência em tudo que fazemos, garantindo agilidade, satisfação do cliente e
-                            melhoria contínua dos nossos processos e serviços.
+                        <div data-aos="zoom-in-up" class="accordeon">
+                            <div class="titulo"><?= esc_html($politica->post_title) ?> <img class="rotate"
+                                                                                   src="<?= MJ_TEMPLATE_URL . '/assets/imgs/seta.png' ?>"
+                                                                                   alt="ícone de seta"></div>
+                            <div class="content hide">
+                                <div class="conteudo">
+                                    <?= !empty($politica->post_excerpt) ? apply_filters('the_content', $politica->post_excerpt) : '' ?>
+                                </div>
+                                <?php if ($link !== '#') : ?>
+                                    <a class="link" target="_blank" href="<?= esc_url($link) ?>">
+                                        [Ler política completa]
+                                    </a>
+                                <?php endif; ?>
+                            </div>
                         </div>
-                        <a class="link" target="_blank" href="<?= SITE_OPTIONS['link_politica'] ?? "#" ?>">
-                            [Ler política completa]
-                        </a>
-                    </div>
-                </div>
 
-                <div data-aos="zoom-in-up" class="accordeon">
-                    <div class="titulo">Segurança e Proteção de Dados <img class="rotate"
-                                                                           src="<?= MJ_TEMPLATE_URL . '/assets/imgs/seta.png' ?>"
-                                                                           alt=""></div>
-                    <div class="content hide">
-                        <div class="conteudo">
-                            Priorizamos a vida, a saúde e a privacidade, atuando com prevenção, capacitação e
-                            conformidade
-                            com a LGPD para proteger nossos colaboradores, clientes e informações.
-                        </div>
-                        <a class="link" target="_blank" href="<?= SITE_OPTIONS['link_politica'] ?? "#" ?>">
-                            [Ler política completa]
-                        </a>
-                    </div>
-                </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
 
             </div>
 

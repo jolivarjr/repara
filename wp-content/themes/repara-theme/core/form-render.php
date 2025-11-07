@@ -212,7 +212,10 @@ class MJFormRender
         global $post;
         $field_name = $args['atributos']['name'];
         $value = $args['atributos']['value'] ?? '';
-        $multiple = $args['multiple'] ?? true; // Default to true for multiple images
+        $multiple = $args['multiple'] ?? true;
+        $label_bt_singular = $args['label_bt_singular'] ?? 'Carregar Imagem';
+        $label_bt_multiple = $args['label_bt_multiple'] ?? 'Carregar Imagens';
+        $file_type = $args['file_type'] ?? 'image'; // 'image', 'application', etc.
 
         $output = '';
         if (isset($args['label']) && $args['label'] != '') {
@@ -221,25 +224,39 @@ class MJFormRender
 
         $output .= '<div class="mj-gallery-container" id="' . $field_name . '_gallery_container" data-multiple="' . ($multiple ? 'true' : 'false') . '">';
         if ($value) {
-            $image_ids = explode(',', $value);
-            foreach ($image_ids as $id) {
-                $image_url = wp_get_attachment_image_src($id, 'thumbnail');
-                if ($image_url) {
-                    $output .= '<div class="mj-gallery-thumb"><img src="' . $image_url[0] . '"/><a href="#" class="mj-remove-image" data-attachment-id="' . $id . '">x</a></div>';
+            $attachment_ids = explode(',', $value);
+            foreach ($attachment_ids as $id) {
+                if (empty($id)) continue;
+                $mime_type = get_post_mime_type($id);
+
+                if ($mime_type && strpos($mime_type, 'image') !== false) {
+                    $image_url = wp_get_attachment_image_src($id, 'thumbnail');
+                    if ($image_url) {
+                        $output .= '<div class="mj-gallery-thumb" data-attachment-id="' . $id . '"><img src="' . $image_url[0] . '"/><a href="#" class="mj-remove-image" data-attachment-id="' . $id . '">x</a></div>';
+                    }
+                } else {
+                    $file_url = wp_get_attachment_url($id);
+                    if ($file_url) {
+                        $file_path = get_attached_file($id);
+                        $file_name = $file_path ? basename($file_path) : 'Arquivo';
+                        $output .= '<div class="mj-gallery-thumb mj-file-thumb" data-attachment-id="' . $id . '"><span>' . esc_html($file_name) . '</span><a href="#" class="mj-remove-image" data-attachment-id="' . $id . '">x</a></div>';
+                    }
                 }
             }
         }
         $output .= '</div>';
 
         $output .= '<input type="hidden" class="mj-gallery-field" id="' . $field_name . '" name="' . $field_name . '" value="' . $value . '" />';
-        
-        $button_text = $multiple ? 'Adicionar Imagens' : 'Adicionar Imagem';
+
+        $button_text = $multiple ? $label_bt_multiple : $label_bt_singular;
         $button_style = (!$multiple && !empty($value)) ? 'style="display:none;"' : '';
-        $output .= '<a href="#" class="button mj-upload-button" ' . $button_style . ' data-field-name="' . $field_name . '" data-post-id="' . $post->ID . '" data-multiple="' . ($multiple ? 'true' : 'false') . '">' . $button_text . '</a>';
+        $output .= '<a href="#" class="button mj-upload-button" ' . $button_style . ' data-field-name="' . $field_name . '" data-post-id="' . ($post->ID ?? 0) . '" data-multiple="' . ($multiple ? 'true' : 'false') . '" data-file-type="' . $file_type . '">' . $button_text . '</a>';
 
         return $output;
     }
 
+    
+    
     private function label($label, $id = '')
     {
         $output = '<label ' . ($id ? 'for="' . $id . '"' : '') . ' >';

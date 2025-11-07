@@ -134,11 +134,6 @@ if (is_admin()) {
             'name' => 'link_contato'
         ]
     ]);
-    $mj_theme_options->add_custom_field('input', 'Link Política de Privacidade', [
-        'atributos' => [
-            'name' => 'link_politica'
-        ]
-    ]);
 }
 
 

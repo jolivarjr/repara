@@ -1,7 +1,7 @@
 <?php
 
 // post-types que devem ter galeria
-$POST_TYPES_WITH_GALLERY = ['sliders', 'galerias']; // ex: 'servicos','banners'
+$POST_TYPES_WITH_GALLERY = ['sliders', 'galerias','politicas_pv']; // ex: 'servicos','banners'
 
 // remove Notícias/Posts padrão do wordpress
 require 'remove-posts-padrao.php';
@@ -10,7 +10,7 @@ require 'slider.php';
 
 require 'galeria.php';
 
-//require 'links-uteis.php';
+require 'politicas_privacidade.php';
 
 // adiciona javascript do editor de galeria em custom post types
 if (!empty($POST_TYPES_WITH_GALLERY)) {
