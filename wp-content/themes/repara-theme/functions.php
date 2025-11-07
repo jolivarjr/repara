@@ -39,14 +39,9 @@ add_action('wp_enqueue_scripts', function () {
         wp_deregister_script('jquery');
         wp_register_script('jquery', includes_url('/js/jquery/jquery.min.js'), [], null, true);
         wp_enqueue_script('jquery');
+        wp_dequeue_script('jquery-migrate'); // Desabilita especificamente o jquery-migrate
     }
 }, 100);
-
-add_filter('wp_default_scripts', function ($scripts) {
-    if (!is_admin() && isset($scripts->registered['jquery'])) {
-        $scripts->registered['jquery']->deps = [];
-    }
-});
 
 
 // desabilita editor de tema
