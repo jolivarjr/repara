@@ -1097,7 +1097,8 @@ main #onde_estamos .content .infos span {
 }
 
 #footer-site .content .item:hover > span,
-#footer-site .content .item:hover > img {
+#footer-site .content .item:hover > img,
+#footer-site .content .item:hover > p {
     transform: translateY(-2px);
     filter: brightness(1.1);
     color: var(--color-secondary);
