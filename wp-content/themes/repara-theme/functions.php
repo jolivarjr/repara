@@ -28,21 +28,6 @@ add_filter('style_loader_tag', function ($html, $handle) {
 
 }, 10, 2);
 
-add_action('wp_enqueue_scripts', function () {
-    wp_dequeue_style('wp-block-library');
-    wp_dequeue_style('wp-block-library-theme');
-    wp_dequeue_style('global-styles');
-}, 100);
-
-add_action('wp_enqueue_scripts', function () {
-    if (!is_admin()) {
-        wp_deregister_script('jquery');
-        wp_register_script('jquery', includes_url('/js/jquery/jquery.min.js'), [], null, true);
-        wp_enqueue_script('jquery');
-        wp_dequeue_script('jquery-migrate'); // Desabilita especificamente o jquery-migrate
-    }
-}, 100);
-
 
 // desabilita editor de tema
 const DISALLOW_FILE_EDIT = true;
@@ -130,39 +115,3 @@ if (is_admin()) {
         ]
     ]);
 }
-
-
-/**
- * Abaixo Código padrão do tema e customizações
- */
-
-// registrando sidebars
-//add_action('widgets_init', 'mj_register_my_widgets_theme');
-//function mj_register_my_widgets_theme()
-//{
-//    // 1 coluna rodapé
-//    register_sidebar(array(
-//        'name' => 'Primeira Coluna Rodapé',
-//        'id' => 'footer-primeira-coluna',
-//        'description' => 'Primeira coluna do rodapé do site'
-//    ));
-//    // 2 coluna rodapé
-//    register_sidebar(array(
-//        'name' => 'Segunda Coluna Rodapé',
-//        'id' => 'footer-segunda-coluna',
-//        'description' => 'Segunda coluna do rodapé do site'
-//    ));
-//    // 3 coluna rodapé
-//    register_sidebar(array(
-//        'name' => 'Terceira Coluna Rodapé',
-//        'id' => 'footer-terceira-coluna',
-//        'description' => 'Terceira coluna do rodapé do site'
-//    ));
-//
-//    // coluna sidebar para blog do site
-//    register_sidebar(array(
-//        'name' => 'Barra Lateral do Blog',
-//        'id' => 'blog-sidebar',
-//        'description' => 'Barra Lateral do Blog'
-//    ));
-//}
