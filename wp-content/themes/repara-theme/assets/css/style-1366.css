@@ -23,6 +23,17 @@
     }
 
     /* =========================== introdução =========================== */
+    main .introducao {
+        height: 160px;
+    }
+
+    main .introducao h3 {
+        font-size: 32px;
+    }
+
+    main .introducao h4 {
+        font-size: 20px;
+    }
 
     /* =========================== sobre =========================== */
     main #sobre .sobre-info h3 {
@@ -30,12 +41,31 @@
     }
 
     main #sobre .sobre-info .texto {
-        gap: 70px;
+        gap: 35px;
+        margin-top: 60px;
     }
 
     main #sobre .sobre-info .texto p {
         font-size: 24px;
         line-height: 42px;
+    }
+
+    /* =========================== poiticas =========================== */
+    main #sobre .politicas{
+        margin-top: 170px;
+    }
+    main #sobre .politicas h3{
+        font-size: 35px;
+    }
+    main #sobre .politicas i{
+        font-size: 23px;
+    }
+    main #sobre .politicas .items .accordeon .titulo{
+        font-size: 25px;
+    }
+    /* =========================== clientes =========================== */
+    main #clientes{
+        padding-bottom: 300px;
     }
     /* =========================== contato =========================== */
     main #contato .content-fixed {
@@ -52,6 +82,19 @@
     main #onde_estamos {
         background-size: 1366px auto;
         background-color: #081327;
+    }
+
+    /* =========================== diferenciais =========================== */
+    main #diferenciais .bloco_2 {
+        padding: 70px 0 100px;
+    }
+
+    main #diferenciais .bloco_2 .texto_1 {
+        font-size: 35px;
+    }
+
+    main #diferenciais .bloco_2 .texto_2 {
+        font-size: 28px;
     }
 
     /* =========================== footer =========================== */

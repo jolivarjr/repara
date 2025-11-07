@@ -64,8 +64,11 @@ jQuery(document).ready(function () {
     jQuery('a[href="#diferenciais"],.diferenciais').on('click', function (e) {
         e.preventDefault();
 
+        // no ‘desktop’ fica em cima dos icones
+        const subtracao = window.outerWidth > 1080 ? 200 : 0;
+
         jQuery('html, body').animate({
-            scrollTop: jQuery('#diferenciais').offset().top
+            scrollTop: jQuery('#diferenciais').offset().top - subtracao
         }, 500);
     });
 
@@ -172,12 +175,13 @@ jQuery(document).ready(function () {
         // Conta quantos slides existem
         const totalSlides = jQuery('.portfolio-carousel .swiper-slide').length;
 
-        const swiper = new Swiper('.portfolio-carousel', {
+        new Swiper('.portfolio-carousel', {
             // Loop só fica true se tiver mais de 1 slide (mais de 9 fotos)
-            loop: totalSlides > 1,
+            // loop: totalSlides > 1,
+            loop: totalSlides > 0,
             autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
+                delay: 6000,
+                disableOnInteraction: true,
             },
             slidesPerView: 1,
             effect: 'slide',

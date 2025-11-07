@@ -18,6 +18,7 @@
     height: 45px;
     border-radius: 50%;
     transition: 0.2s all;
+    display: none;
 }
 
 #back-top:hover {
@@ -255,14 +256,19 @@ p {
 main .introducao {
     width: 100%;
     height: 198px;
+    padding: 0 27px;
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+main .introducao div {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 6px;
-    padding: 0 27px;
-    background: var(--color-secondary);
-    color: #fff;
 }
 
 main .introducao h3, main .introducao h4 {
@@ -380,7 +386,7 @@ main #sobre .sobre-bases .fileira .informacao .texto {
 }
 
 main #sobre .politicas {
-    margin-top: 260px;
+    margin-top: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -509,7 +515,6 @@ main #servicos .cards .item {
     padding: 40px 34px;
     border-radius: 27px;
     background: white;
-    transition: transform 0.3s ease;
     min-height: 368px;
 }
 
@@ -752,6 +757,11 @@ main #portfolio .galeria .container_foto {
     width: 100%;
     height: 425px;
     overflow: hidden;
+    z-index: 9999;
+}
+
+main #portfolio .galeria .container_foto .port_foto {
+    z-index: 9999;
 }
 
 main #portfolio .galeria img {
@@ -1076,17 +1086,30 @@ main #onde_estamos .content .infos span {
     margin-bottom: 220px;
 }
 
+#footer-site .content .item:active,
+#footer-site .content .item:focus,
 #footer-site .content .item {
     display: flex;
     align-items: center;
     gap: 20px;
+    text-decoration: none;
+    transition: 0.6s all;
+}
+
+#footer-site .content .item:hover > span,
+#footer-site .content .item:hover > img {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    color: var(--color-secondary);
 }
 
 #footer-site .content .item img {
     flex-shrink: 0;
     max-width: 100%;
+    width: 26px;
     height: auto;
     object-fit: contain;
+    transition: 0.2s all;
 }
 
 #footer-site .content .item:nth-child(2) img,
@@ -1103,6 +1126,7 @@ main #onde_estamos .content .infos span {
 #footer-site .content .item span {
     font-size: 35px;
     line-height: 40px;
+    transition: 0.2s all;
 }
 
 #footer-site .content .item p {

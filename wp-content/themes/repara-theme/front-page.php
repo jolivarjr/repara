@@ -5,8 +5,10 @@
 
 <main>
     <section class="introducao">
-        <h3 data-aos="fade-left">Engenharia aplicada, <strong>soluções que transformam.</strong></h3>
-        <h4 data-aos="fade-right">Mais de 8 anos de experiência em engenharia e manutenção industrial.</h4>
+        <div data-aos="fade-left" data-aos-delay="200">
+            <h3>Engenharia aplicada, <strong>soluções que transformam.</strong></h3>
+            <h4>Mais de 8 anos de experiência em engenharia e facilities.</h4>
+        </div>
     </section>
 
     <section id="sobre">
@@ -88,9 +90,10 @@
             <div class="items">
 
                 <div data-aos="zoom-in-up" class="accordeon">
-                    <div class="titulo">Recursos Humanos <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/seta.png' ?>"
+                    <div class="titulo">Recursos Humanos <img class="rotate"
+                                                              src="<?= MJ_TEMPLATE_URL . '/assets/imgs/seta.png' ?>"
                                                               alt=""></div>
-                    <div class="content">
+                    <div class="content hide">
                         <div class="conteudo">
                             Valorizamos as pessoas como nosso maior ativo, promovendo um ambiente seguro, ético e
                             colaborativo, com oportunidades de crescimento e desenvolvimento contínuo.
@@ -101,10 +104,11 @@
                     </div>
                 </div>
 
-                <div data-aos="zoom-in-down" class="accordeon">
-                    <div class="titulo">Qualidade <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/seta.png' ?>" alt="">
+                <div data-aos="zoom-in-up" class="accordeon">
+                    <div class="titulo">Qualidade <img class="rotate"
+                                                       src="<?= MJ_TEMPLATE_URL . '/assets/imgs/seta.png' ?>" alt="">
                     </div>
-                    <div class="content">
+                    <div class="content hide">
                         <div class="conteudo">
                             Buscamos a excelência em tudo que fazemos, garantindo agilidade, satisfação do cliente e
                             melhoria contínua dos nossos processos e serviços.
@@ -115,10 +119,11 @@
                     </div>
                 </div>
 
-                <div data-aos="zoom-in-left" class="accordeon">
-                    <div class="titulo">Segurança e Proteção de Dados <img
-                                src="<?= MJ_TEMPLATE_URL . '/assets/imgs/seta.png' ?>" alt=""></div>
-                    <div class="content">
+                <div data-aos="zoom-in-up" class="accordeon">
+                    <div class="titulo">Segurança e Proteção de Dados <img class="rotate"
+                                                                           src="<?= MJ_TEMPLATE_URL . '/assets/imgs/seta.png' ?>"
+                                                                           alt=""></div>
+                    <div class="content hide">
                         <div class="conteudo">
                             Priorizamos a vida, a saúde e a privacidade, atuando com prevenção, capacitação e
                             conformidade
@@ -311,8 +316,8 @@
                 $primeiro_post = !empty($get_posts_galerias) ? $get_posts_galerias[0] : null;
 
                 $imagens_ids = !empty($primeiro_post)
-                    ? get_post_meta($primeiro_post->ID, 'imagens', true)
-                    : [];
+                        ? get_post_meta($primeiro_post->ID, 'imagens', true)
+                        : [];
 
                 if ($imagens_ids) {
                     $all_image_ids = explode(',', $imagens_ids);
@@ -329,7 +334,8 @@
                                         $image_url = $image_data[0];
                                         ?>
                                         <div class="container_foto">
-                                            <img data-aos="zoom-in" src="<?= $image_url ?>" alt="Foto da galeria de projetos" class="port_foto" loading="lazy">
+                                            <img data-aos="zoom-in" src="<?= $image_url ?>"
+                                                 alt="Foto da galeria de projetos" class="port_foto" loading="lazy">
                                         </div>
                                         <?php
                                     }
@@ -345,8 +351,9 @@
 
             <?php
             // Só mostra a navegação se tiver mais de 9 imagens
-            if (isset($all_image_ids) && count($all_image_ids) > 9) :
-            ?>
+            //            if (isset($all_image_ids) && count($all_image_ids) > 9) :
+            if (isset($all_image_ids)) :
+                ?>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
 
@@ -376,58 +383,36 @@
 
             <div class="marcas" data-aos="fade-up">
                 <div class="linha linha-4">
-                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/ml.png' ?>"
-                         alt="">
-                    <img class="item"
-                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/dhl.png' ?>" alt="">
-                    <img class="item"
-                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/renner.png' ?>" alt="">
-                    <img class="item"
-                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/americanas.png' ?>" alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/ml.png' ?>" alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/dhl.png' ?>" alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/renner.png' ?>" alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/americanas.png' ?>" alt="">
                 </div>
 
                 <div class="linha linha-2">
-                    <img class="item"
-                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/pitagoras.png' ?>" alt="">
-                    <img class="item"
-                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sampaio.png' ?>" alt="">
-                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/brf.png' ?>"
-                         alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/pitagoras.png' ?>" alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sampaio.png' ?>" alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/brf.png' ?>" alt="">
                 </div>
 
                 <div class="linha linha-3">
-                    <img class="item"
-                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/carrefour.png' ?>" alt="">
-                    <img class="item"
-                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sams.png' ?>" alt="">
-                    <img class="item"
-                         src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/salta.png' ?>" alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sushi-ruy.png' ?>" alt="">
+                    <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/salta.png' ?>" alt="">
                 </div>
             </div>
 
-            <div class="marcas_mobile">
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/ml.png' ?>"
-                     alt="">
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/dhl.png' ?>"
-                     alt="">
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/renner.png' ?>"
-                     alt="">
-                <img class="item"
-                     src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/americanas.png' ?>" alt="">
+            <div class="marcas_mobile" data-aos="fade-up">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/ml.png' ?>" alt="">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/dhl.png' ?>" alt="">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/renner.png' ?>" alt="">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/americanas.png' ?>" alt="">
 
-                <img class="item"
-                     src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/pitagoras.png' ?>" alt="">
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sampaio.png' ?>"
-                     alt="">
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/brf.png' ?>"
-                     alt="">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/pitagoras.png' ?>" alt="">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sampaio.png' ?>" alt="">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/brf.png' ?>" alt="">
 
-                <img class="item"
-                     src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/carrefour.png' ?>" alt="">
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sams.png' ?>"
-                     alt="">
-                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/salta.png' ?>"
-                     alt="">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/sushi-ruy.png' ?>" alt="">
+                <img class="item" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/marcas/salta.png' ?>" alt="">
             </div>
 
         </div>

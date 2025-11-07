@@ -14,7 +14,7 @@ function mj_load_css(): void
 
     // CSS base
     wp_enqueue_style('style-base', MJ_TEMPLATE_URL . '/assets/css/style.css', [], null);    // CSS para desktop grande
-    wp_enqueue_style('style-1366', MJ_TEMPLATE_URL . '/assets/css/style-1366.css', ['style-base'], null);    // CSS mobile com media query
+    wp_enqueue_style('style-1366', MJ_TEMPLATE_URL . '/assets/css/style-1366.css', ['style-base'], null,'screen and (max-width: 1366px)');
     wp_enqueue_style('style-mobile', MJ_TEMPLATE_URL . '/assets/css/style-mobile.css', ['style-base'], null, 'screen and (max-width: 1080px)');
 
     wp_enqueue_style('view_theme', MJ_TEMPLATE_URL . '/assets/css/visualizador-imagens.css');

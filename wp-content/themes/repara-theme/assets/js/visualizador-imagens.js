@@ -17,11 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
 
     // Abrir modal ao clicar na imagem
-    imagens.forEach((img, index) => {
-        img.addEventListener('click', function() {
-            currentIndex = index;
-            mostrarImagem(this.src);
-        });
+    // imagens.forEach((img, index) => {
+    //     img.addEventListener('click', function() {
+    //         currentIndex = index;
+    //         mostrarImagem(this.src);
+    //     });
+    // });
+
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('port_foto')) {
+            const imgs = [...document.querySelectorAll('.port_foto')];
+            currentIndex = imgs.indexOf(e.target);
+            mostrarImagem(e.target.src);
+        }
     });
 
     function mostrarImagem(src) {

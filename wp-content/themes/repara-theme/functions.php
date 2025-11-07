@@ -9,7 +9,12 @@ add_filter('style_loader_tag', function ($html, $handle) {
         'fontawesome',
         'owlcss',
         'aos-css',
-//        'style_theme',
+        'swiper-css',
+
+        'style-base',
+        'style-1366',
+        'style-mobile',
+
         'view_theme'
     ];
 
@@ -99,9 +104,29 @@ if (is_admin()) {
             'name' => 'instagram_site'
         ]
     ]);
+    $mj_theme_options->add_custom_field('input', 'Link Instagram', [
+        'atributos' => [
+            'name' => 'instagram_site_link'
+        ]
+    ]);
     $mj_theme_options->add_custom_field('input', 'Linkedin  ', [
         'atributos' => [
             'name' => 'linkedin_site'
+        ]
+    ]);
+    $mj_theme_options->add_custom_field('input', 'Link Linkedin  ', [
+        'atributos' => [
+            'name' => 'linkedin_site_link'
+        ]
+    ]);
+    $mj_theme_options->add_custom_field('input', 'Google  ', [
+        'atributos' => [
+            'name' => 'google_site'
+        ]
+    ]);
+    $mj_theme_options->add_custom_field('input', 'Link Google  ', [
+        'atributos' => [
+            'name' => 'google_site_link'
         ]
     ]);
     $mj_theme_options->add_custom_field('input', 'Link Entre em Contato', [

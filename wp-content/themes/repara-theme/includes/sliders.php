@@ -19,10 +19,33 @@
 
                             <div class="slider-adicional">
                                 <div class="s-texto">
-                                    <div class="detalhe"></div>
-                                    <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/text_cuidamos.png' ?>" alt="">
+                                    <div
+                                            <?php if (!wp_is_mobile()) : ?>
+                                                data-aos="fade-down"
+                                            <?php endif; ?>
+                                            class="detalhe"
+                                    >
+
+                                    </div>
+                                    <img
+                                            <?php if (!wp_is_mobile()) : ?>
+                                                data-aos="fade-zoom-in"
+                                                data-aos-easing="ease-in-back"
+                                                data-aos-delay="0"
+                                                data-aos-offset="0"
+                                            <?php endif; ?>
+                                            src="<?= MJ_TEMPLATE_URL . '/assets/imgs/text_cuidamos.png' ?>"
+                                            alt=""
+                                    >
                                 </div>
-                                <img class="botao" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/botao_fale.png' ?>" alt="">
+                                <img
+                                        <?php if (!wp_is_mobile()) : ?>
+                                            data-aos="fade-right"
+                                        <?php endif; ?>
+                                        class="botao"
+                                        src="<?= MJ_TEMPLATE_URL . '/assets/imgs/botao_fale.png' ?>"
+                                        alt=""
+                                >
                             </div>
 
                         <?php endif; ?>

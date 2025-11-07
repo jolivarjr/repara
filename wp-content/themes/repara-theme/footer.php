@@ -15,15 +15,20 @@
 
         <p data-aos="fade-left" class="follow">Siga nossas redes sociais:</p>
 
-        <div data-aos="fade-right" class="item">
+        <a data-aos="fade-right" href="<?= SITE_OPTIONS['instagram_site_link'] ?? '#' ?>" target="_blank" class="item">
             <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/instagram-footer.png' ?>" alt="">
             <span><?= SITE_OPTIONS['instagram_site'] ?? '-' ?></span>
-        </div>
+        </a>
 
-        <div data-aos="fade-left" class="item">
+        <a data-aos="fade-left" href="<?= SITE_OPTIONS['linkedin_site_link'] ?? '#' ?>" target="_blank" class="item">
             <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/linkedin-footer.png' ?>" alt="">
             <span><?= SITE_OPTIONS['linkedin_site'] ?? '-' ?></span>
-        </div>
+        </a>
+
+        <a data-aos="fade-right" href="<?= SITE_OPTIONS['google_site_link'] ?? '#' ?>" target="_blank" class="item">
+            <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/google-footer.png' ?>" alt="">
+            <span><?= SITE_OPTIONS['google_site'] ?? '-' ?></span>
+        </a>
 
     </div>
 </footer>
