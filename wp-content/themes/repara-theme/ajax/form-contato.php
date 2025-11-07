@@ -43,9 +43,8 @@ function enviar_formulario_contato()
             }
 
             $body = "<p><strong>Nome: " . sanitize_text_field($_POST['nome']) . "</strong></p>";
-            $body .= "<p><strong>E-mail: " . sanitize_text_field($_POST['telefone']) . "</strong></p>";
+            $body .= "<p><strong>E-mail: " . sanitize_text_field($_POST['email']) . "</strong></p>";
             $body .= "<p><strong>Telefone: " . sanitize_text_field($_POST['telefone']) . "</strong></p>";
-            $body .= "<p><strong>Telefone: " . sanitize_text_field($_POST['email']) . "</strong></p>";
             $body .= "<p><strong>Mensagem: " . sanitize_text_field($_POST['mensagem']) . "</strong></p>";
 
             $headers = array(
