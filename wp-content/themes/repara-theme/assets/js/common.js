@@ -1,11 +1,27 @@
-//# loader
-jQuery(window).on('load', function () {
-    jQuery('#page-loader').fadeOut(500);
+//# loader - Runs when the DOM is ready, doesn't wait for images
+document.addEventListener('DOMContentLoaded', function() {
+    jQuery('#page-loader').fadeOut(300);
     jQuery('html,body').css('overflow', 'auto');
 });
 
 // ready
 jQuery(document).ready(function () {
+
+    // Definições de animação para mobile
+    if (window.innerWidth < 1080) { // Um breakpoint comum para mobile
+        // Fileira 1 de icones
+        jQuery('.sb-icon-1').attr('data-aos', 'fade-down-right');
+        jQuery('.sb-icon-2').attr('data-aos', 'fade-down-left');
+        jQuery('.sb-icon-3').attr('data-aos', 'fade-down-right');
+        jQuery('.sb-icon-4').attr('data-aos', 'fade-down-left');
+
+        // Fileira 2 de informacoes
+        jQuery('.sb-info-1').attr('data-aos', 'fade-up-right');
+        jQuery('.sb-info-2').attr('data-aos', 'fade-up-left');
+        jQuery('.sb-info-3').attr('data-aos', 'fade-up-right');
+        jQuery('.sb-info-4').attr('data-aos', 'fade-up-left');
+    }
+
     setTimeout(function () {
         AOS.init({duration: 1100, once: true, delay: 0});
     }, 300)
@@ -201,62 +217,3 @@ jQuery(document).ready(function () {
         });
     }
 });
-
-
-/*
-
-⚙️ Opções Comuns:
-    Opção	Tipo	Descrição
-
-    items	Number	Quantidade de itens por slide (padrão). Pode ser sobrescrito no responsive.
-    loop	Boolean	Habilita o loop infinito do carrossel.
-    margin	Number	Margem (em pixels) entre os itens.
-    nav	Boolean	Mostra os botões de navegação (prev/next).
-    dots	Boolean	Mostra os pontos de paginação abaixo do carrossel.
-    autoplay	Boolean	Inicia a rotação automática dos slides.
-    autoplayTimeout	Number	Tempo entre os slides no autoplay (em milissegundos).
-    autoplayHoverPause	Boolean	Pausa o autoplay quando o mouse estiver sobre o carrossel.
-    smartSpeed	Number	Duração da animação de transição entre slides (ms).
-    center	Boolean	Centraliza o item ativo.
-    startPosition	Number/String	Define o slide inicial (0, URLHash, etc.).
-    navText	Array	Define o texto (ou HTML) dos botões de navegação.
-    lazyLoad	Boolean	Carrega imagens apenas quando o slide for exibido (lazy load).
-    responsiveClass	Boolean	Adiciona classes CSS responsivas automaticamente.
-    stagePadding	Number	Adiciona um padding ao redor dos slides para mostrar parcialmente os vizinhos.
-    mouseDrag	Boolean	Permite arrastar com o mouse.
-    touchDrag	Boolean	Permite arrastar com o toque em dispositivos móveis.
-    pullDrag	Boolean	Se true, permite "puxar" os slides para fora.
-    freeDrag	Boolean	Habilita drag sem snap. Pode ficar mais "solto".
-    URLhashListener	Boolean	Escuta mudanças de hash para sincronizar com slides.
-    animateOut / animateIn	String	Animações de entrada/saída (ex: 'fadeOut', 'fadeIn').
-
-📦 Exemplo mais completo:
-
-jQuery('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    dots: true,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    autoplayHoverPause: true,
-    smartSpeed: 600,
-    responsiveClass: true,
-    navText: ["<span class='prev'>&lt;</span>", "<span class='next'>&gt;</span>"],
-    responsive: {
-        0: {
-            items: 1,
-            nav: false
-        },
-        600: {
-            items: 2,
-            nav: true
-        },
-        1000: {
-            items: 3,
-            nav: true,
-            loop: false
-        }
-    }
-});
-*/

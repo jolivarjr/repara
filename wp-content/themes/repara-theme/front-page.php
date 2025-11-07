@@ -41,30 +41,30 @@
         <div class="sobre-bases">
 
             <div data-aos="fade-down-right" class="fileira">
-                <div data-aos="<?= wp_is_mobile() ? 'fade-down-right' : '' ?>" class="icone"><img
+                <div data-aos="" class="icone sb-icon-1"><img
                             src="<?= MJ_TEMPLATE_URL . '/assets/imgs/bandeira.png' ?>" alt=""></div>
-                <div data-aos="<?= wp_is_mobile() ? 'fade-down-left' : '' ?>" class="icone"><img
+                <div data-aos="" class="icone sb-icon-2"><img
                             src="<?= MJ_TEMPLATE_URL . '/assets/imgs/predio.png' ?>" alt=""></div>
-                <div data-aos="<?= wp_is_mobile() ? 'fade-down-right' : '' ?>" class="icone"><img
+                <div data-aos="" class="icone sb-icon-3"><img
                             src="<?= MJ_TEMPLATE_URL . '/assets/imgs/network.png' ?>" alt=""></div>
-                <div data-aos="<?= wp_is_mobile() ? 'fade-down-left' : '' ?>" class="icone"><img
+                <div data-aos="" class="icone sb-icon-4"><img
                             src="<?= MJ_TEMPLATE_URL . '/assets/imgs/brazil.png' ?>" alt=""></div>
             </div>
 
             <div data-aos="fade-down-left" class="fileira">
-                <div data-aos="<?= wp_is_mobile() ? 'fade-up-right' : '' ?>" class="informacao">
+                <div data-aos="" class="informacao sb-info-1">
                     <div class="titulo">FUNDAÇÃO</div>
                     <div class="texto">
                         2017
                     </div>
                 </div>
-                <div data-aos="<?= wp_is_mobile() ? 'fade-up-left' : '' ?>" class="informacao">
+                <div data-aos="" class="informacao sb-info-2">
                     <div class="titulo">SEDE</div>
                     <div class="texto">
                         Belém-PA
                     </div>
                 </div>
-                <div data-aos="<?= wp_is_mobile() ? 'fade-up-right' : '' ?>" class="informacao">
+                <div data-aos="" class="informacao sb-info-3">
                     <div class="titulo">BASES</div>
                     <div class="texto">
                         São Luiz-MA <br>
@@ -72,7 +72,7 @@
                         São Paulo-SP
                     </div>
                 </div>
-                <div data-aos="<?= wp_is_mobile() ? 'fade-up-left' : '' ?>" class="informacao">
+                <div data-aos="" class="informacao sb-info-4">
                     <div class="titulo">PRESENÇA</div>
                     <div class="texto">
                         24 Estados
