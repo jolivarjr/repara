@@ -20,3 +20,14 @@ $slider_metaboxs->add_field_form('file_upload', [
         'name' => 'arquivo',
     ]
 ]);
+
+
+// Remove edição do slug
+function remover_edicao_slug(): void
+{
+    global $post;
+    if ($post && $post->post_type === 'politicas_pv') {
+        echo '<style>#edit-slug-box { display: none; }</style>';
+    }
+}
+add_action('admin_head', 'remover_edicao_slug');
