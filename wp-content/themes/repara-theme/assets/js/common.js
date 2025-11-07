@@ -20,6 +20,20 @@ jQuery(document).ready(function () {
         jQuery('.sb-info-2').attr('data-aos', 'fade-up-left');
         jQuery('.sb-info-3').attr('data-aos', 'fade-up-right');
         jQuery('.sb-info-4').attr('data-aos', 'fade-up-left');
+
+        // Slider adicional
+        jQuery('.slider-adicional').attr('data-aos', 'fade-zoom-in');
+
+    } else {
+        // Slider adicional
+        jQuery('.slider-adicional .s-texto .detalhe').attr('data-aos', 'fade-down');
+        jQuery('.slider-adicional .s-texto img').attr({
+            'data-aos': 'fade-zoom-in',
+            'data-aos-easing': 'ease-in-back',
+            'data-aos-delay': '0',
+            'data-aos-offset': '0'
+        });
+        jQuery('.slider-adicional img.botao').attr('data-aos', 'fade-right');
     }
 
     setTimeout(function () {
