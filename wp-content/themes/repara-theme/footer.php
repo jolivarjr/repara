@@ -3,10 +3,10 @@
 
         <img data-aos="zoom-in-up" class="logo" src="<?= MJ_TEMPLATE_URL . '/assets/imgs/logo-rodape.png' ?>" alt="">
 
-        <div data-aos="fade-left" class="item">
+        <a data-aos="fade-left" href="<?= SITE_OPTIONS['link_contato'] ?? '#' ?>" target="_blank" class="item">
             <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/wpp-footer.png' ?>" alt="">
             <p><?= SITE_OPTIONS['telefone_site'] ?? '-' ?></p>
-        </div>
+        </a>
 
         <div data-aos="fade-right" class="item">
             <img src="<?= MJ_TEMPLATE_URL . '/assets/imgs/email-footer.png' ?>" alt="">
