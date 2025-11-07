@@ -9,7 +9,7 @@ $register_slider = new MJRegisterCustomPostType(
     'Políticas de Privacidade'
 );
 
-$slider_metaboxs = new MJRegisterMetaBox('meta_arquivo', 'Campos', ['politicas_pv']);
+$slider_metaboxs = new MJRegisterMetaBox('meta_arquivo', 'Arquivo', ['politicas_pv']);
 
 $slider_metaboxs->add_field_form('file_upload', [
     'label' => '',
