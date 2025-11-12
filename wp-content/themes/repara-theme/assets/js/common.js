@@ -170,12 +170,21 @@ jQuery(document).ready(function () {
 jQuery(document).ready(function () {
 
     jQuery("#enviar_form_contato").on('click', function (event) {
-        event.preventDefault()
+        event.preventDefault();
 
-        let nome = jQuery("#nome").val().trim()
-        let telefone = jQuery("#telefone").val().trim()
-        let email = jQuery("#email").val().trim()
-        let mensagem = jQuery("#mensagem").val().trim()
+        const button = jQuery(this);
+
+        // Prevent multiple clicks
+        if (button.hasClass('loading')) {
+            return;
+        }
+
+        button.addClass('loading').prop('disabled', true);
+
+        let nome = jQuery("#nome").val().trim();
+        let telefone = jQuery("#telefone").val().trim();
+        let email = jQuery("#email").val().trim();
+        let mensagem = jQuery("#mensagem").val().trim();
 
         jQuery.ajax({
             url: window.MJ_AJAX_URL,
@@ -185,19 +194,23 @@ jQuery(document).ready(function () {
                 nome, telefone, email, mensagem
             },
             success: function (resultado) {
-                jQuery("#result_form_contato").html(resultado)
+                jQuery("#result_form_contato").html(resultado);
 
                 if (resultado.search("E-mail enviado com sucesso") > 0) {
-                    jQuery("input,textarea").val("")
+                    jQuery("input,textarea").val("");
 
                     setTimeout(function () {
-                        jQuery('.alert').hide(500)
-                    }, 7000)
+                        jQuery('.alert').hide(500);
+                    }, 7000);
                 }
+            },
+            complete: function() {
+                // Runs on success or error
+                button.removeClass('loading').prop('disabled', false);
             }
-        })
-    })
-})
+        });
+    });
+});
 
 // Carrossel do portfólio
 jQuery(document).ready(function () {

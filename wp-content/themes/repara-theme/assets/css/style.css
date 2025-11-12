@@ -986,6 +986,25 @@ main #contato form #enviar_form_contato:hover {
     filter: brightness(1.1);
 }
 
+main #contato form #enviar_form_contato.loading {
+    opacity: 0.8;
+}
+
+main #contato form #enviar_form_contato.loading span {
+    display: none;
+}
+
+main #contato form #enviar_form_contato.loading::after {
+    margin-left: 10px;
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: 4px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
 /*** ONDE ESTAMOS ***/
 main #onde_estamos {
     background-image: url(../imgs/mapa_section.jpg);

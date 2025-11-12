@@ -408,7 +408,7 @@
                 <input type="text" id="email" placeholder="E-mail:">
                 <textarea id="mensagem" cols="30" rows="5" placeholder="Mensagem:"></textarea>
 
-                <button id="enviar_form_contato">Enviar</button>
+                <button id="enviar_form_contato">Enviar<span></span></button>
                 <div id="result_form_contato"></div>
             </form>
         </div>
