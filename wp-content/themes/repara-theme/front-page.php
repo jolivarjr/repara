@@ -6,7 +6,7 @@
 <main>
     <section class="introducao">
         <div data-aos="fade-left" data-aos-delay="200">
-            <h3>Engenharia aplicada, <strong>soluções que transformam.</strong></h3>
+            <h3>Engenharia aplicada, <strong>obtendo soluções que transformam.</strong></h3>
             <h4>Mais de 8 anos de experiência em engenharia e facilities.</h4>
         </div>
     </section>
