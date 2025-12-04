@@ -1103,6 +1103,7 @@ main #onde_estamos .content .infos span {
 
 #footer-site .content .logo {
     margin-bottom: 220px;
+    height: 115px;
 }
 
 #footer-site .content .item:active,
