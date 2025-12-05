@@ -293,47 +293,55 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <?php
-                $get_posts_galerias = get_posts(['posts_per_page' => 1, 'post_type' => 'galerias']);
-                $primeiro_post = !empty($get_posts_galerias) ? $get_posts_galerias[0] : null;
+                // Busca todos os posts do CPT 'galerias'
+                $galerias_posts = get_posts([
+                    'post_type' => 'galerias',
+                    'posts_per_page' => -1,
+                    'orderby' => 'date',
+                    'order' => 'DESC',
+                ]);
 
-                $imagens_ids = !empty($primeiro_post)
-                        ? get_post_meta($primeiro_post->ID, 'imagens', true)
-                        : [];
+                if ($galerias_posts) {
+                    // Itera sobre cada post de galeria
+                    foreach ($galerias_posts as $galeria_post) {
+                        // Pega os IDs das imagens do campo 'imagens'
+                        $imagens_ids_str = get_post_meta($galeria_post->ID, 'imagens', true);
 
-                if ($imagens_ids) {
-                    $all_image_ids = explode(',', $imagens_ids);
-                    $slides = array_chunk($all_image_ids, 9); // Agrupa as imagens em conjuntos de 9
-
-                    foreach ($slides as $slide_images) {
-                        ?>
-                        <div class="swiper-slide">
-                            <div class="galeria">
-                                <?php
-                                foreach ($slide_images as $image_id) {
-                                    $image_data = wp_get_attachment_image_src($image_id, 'large');
-                                    if ($image_data) {
-                                        $image_url = $image_data[0];
-                                        ?>
-                                        <div class="container_foto">
-                                            <img data-aos="zoom-in" src="<?= $image_url ?>"
-                                                 alt="Foto da galeria de projetos" class="port_foto" loading="lazy">
-                                        </div>
-                                        <?php
+                        if (!empty($imagens_ids_str)) {
+                            $image_ids = explode(',', $imagens_ids_str);
+                            ?>
+                            <div class="swiper-slide">
+                                <h3 class="portfolio-slide-title"><?= esc_html($galeria_post->post_title) ?></h3>
+                                <div class="galeria">
+                                    <?php
+                                    // Itera sobre cada ID de imagem e a exibe
+                                    foreach ($image_ids as $image_id) {
+                                        $image_data = wp_get_attachment_image_src($image_id, 'large');
+                                        if ($image_data) {
+                                            $image_url = $image_data[0];
+                                            $alt_text = "Foto da galeria de projetos: " . $galeria_post->post_title;
+                                            ?>
+                                            <div class="container_foto">
+                                                <img data-aos="zoom-in" src="<?= esc_url($image_url) ?>"
+                                                     alt="<?= esc_attr($alt_text) ?>"
+                                                     class="port_foto" loading="lazy">
+                                            </div>
+                                            <?php
+                                        }
                                     }
-                                }
-                                ?>
+                                    ?>
+                                </div>
                             </div>
-                        </div>
-                        <?php
+                            <?php
+                        }
                     }
                 }
                 ?>
             </div>
 
             <?php
-            // Só mostra a navegação se tiver mais de 9 imagens
-            //            if (isset($all_image_ids) && count($all_image_ids) > 9) :
-            if (isset($all_image_ids)) :
+            // Mostra a navegação apenas se houver mais de um post de galeria
+            if (isset($galerias_posts) && count($galerias_posts) > 1) :
                 ?>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
