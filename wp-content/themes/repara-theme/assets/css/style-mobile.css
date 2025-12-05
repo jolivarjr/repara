@@ -496,7 +496,7 @@
 
     main #diferenciais .bloco_2 {
         width: 100%;
-        padding: 60px 30px 100px;
+        padding: 60px 30px;
         gap: 30px;
     }
 
@@ -524,10 +524,12 @@
         height: 180px;
     }
 
-    main #portfolio .portfolio-carousel .portfolio-slide-title {
-        font-size: 1.5rem;
-        max-width: 90%;
-        top: -50px;
+    main #portfolio .portfolio-carousel .swiper-slide {
+        padding-top: 32px;
+    }
+
+    main #portfolio .portfolio-carousel .swiper-slide .portfolio-slide-title {
+        font-size: 1.3rem;
     }
 
     /*========================= CLIENTES =============================*/
@@ -662,7 +664,7 @@
 
     #footer-site .content .logo {
         margin: 0 auto 100px 10%;
-        width: 80%;
+        height: 72px;
     }
 
     #footer-site .content .item {

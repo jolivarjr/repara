@@ -720,7 +720,7 @@ main #diferenciais .bloco_2 {
     flex-direction: column;
     align-items: center;
     gap: 64px;
-    padding: 80px 0 200px;
+    padding: 80px 0 130px;
 }
 
 main #diferenciais .bloco_2 .texto_1 {
@@ -779,20 +779,26 @@ main #portfolio .galeria img:hover {
 
 main #portfolio .portfolio-carousel {
     position: relative;
-    overflow: visible;
 }
 
-main #portfolio .portfolio-carousel .portfolio-slide-title {
+
+main #portfolio .portfolio-carousel .swiper-slide {
+    position: relative;
+    padding-top: 55px;
+    background: #CA3A0E;
+}
+
+main #portfolio .portfolio-carousel .swiper-slide .portfolio-slide-title {
     z-index: 100;
     position: absolute;
     font-style: italic;
-    top: -70px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: auto;
     max-width: 80%;
     color: #fff;
-    padding: 15px 30px;
+    padding: 0 30px;
     font-size: 2.5rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -849,10 +855,6 @@ main #portfolio .portfolio-carousel .swiper-pagination-bullet-active {
     opacity: 1;
     width: 14px;
     height: 14px;
-}
-
-main #portfolio .portfolio-carousel .swiper-slide {
-    position: relative;
 }
 
 /*** CLIENTES ***/
